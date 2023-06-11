@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom"
-import styles from "./navLink.module.css"
+import styles from "./navlink.module.css"
 import classNames from "classnames"
 
 export default function NavLink({ link, content }) {
