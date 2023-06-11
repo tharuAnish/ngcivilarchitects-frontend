@@ -1,5 +1,5 @@
 .nav {
-  background-color: #000000e5;
+  background-color: #0a0a0af5;
   color: white;
   height: 67.2px;
   position: sticky;
@@ -23,13 +23,15 @@
 .img {
   width: 40px;
   height: 40px;
+  margin-left: 2rem;
+  filter: invert(1);
 }
 .img img {
-  height: 40px;
+  height: 45px;
 }
 
 .can {
-  color: var(--color-canwebe-deep);
+  color: var(--color-orange-deep);
   font-weight: 500;
 }
 .navWrapper {
@@ -62,7 +64,7 @@
   content: "";
   height: 100%;
   width: 100%;
-  border: 2px solid white;
+  border: 2px solid var(--color-orange-deep);
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(0);
@@ -79,7 +81,7 @@
     padding: 4px;
   }
   .contactBtn:active {
-    background-color: var(--color-canwebe-deep);
+    background-color: var(--color-orange-deep);
     color: white;
   }
 }
@@ -116,7 +118,7 @@
   right: 0;
   bottom: 0;
   z-index: 999;
-  border-bottom: 2px solid var(--color-canwebe-deep);
+  border-bottom: 2px solid var(--color-orange-deep);
 }
 
 @media screen and (max-width: 885px) {
@@ -133,6 +135,15 @@
 }
 
 @media screen and (max-width: 500px) {
+  .img {
+    width: 40px;
+    height: 40px;
+    margin-left: 1rem;
+    filter: invert(1);
+  }
+  .img img {
+    height: 40px;
+  }
   .logo {
     font-size: 1.8rem;
   }

@@ -1,0 +1,153 @@
+.about {
+  min-height: calc(100vh - 67.2px);
+  display: flex;
+  flex-direction: row-reverse;
+
+  background-color: var(--color-black-1);
+  position: relative;
+}
+.aboutleft,
+.whyusright {
+  width: 50%;
+  min-width: 50%;
+}
+
+.aboutright {
+  background-color: var(--color-orange-deep);
+  color: #dedcdb;
+  width: 100%;
+}
+.aboutleft {
+  height: calc(100vh - 67.2px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 67.1px;
+  z-index: 1;
+  background-color: #dedcdb;
+}
+.aboutImg {
+  max-width: 20rem;
+  width: 100%;
+  height: auto;
+  /* border: 0.23rem solid black; */
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.aboutleftp {
+  font-size: 2.6rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.aboutleftp::after {
+  content: "";
+  width: 11rem;
+  height: 0.3rem;
+  background-color: var(--color-olive);
+  display: block;
+  margin-top: 0.6rem;
+  margin-inline: auto;
+}
+.aboutleftsubp {
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+.point1,
+.point2,
+.point3 {
+  height: calc(100vh - 67.2px);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* Latest Tech Point 1 */
+.point1Svg {
+  width: 200px;
+}
+
+.point3Svg {
+  width: 170px;
+}
+.point1H4 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #c25d5d;
+}
+.point1P {
+  font-size: 1.1rem;
+  max-width: 400px;
+  text-align: center;
+  line-height: 25px;
+}
+
+/* Problem Point 2 */
+.point2 {
+  flex-direction: row;
+  gap: 20px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1000px) {
+  .aboutleft {
+    width: 40%;
+  }
+  .aboutright {
+    width: 60%;
+  }
+  .aboutleftp {
+    font-size: 2.6rem;
+  }
+  .aboutleftsubp {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .about {
+    flex-direction: column;
+  }
+  .aboutleft,
+  .aboutright {
+    width: 100%;
+  }
+  .aboutleft {
+    height: 25vh;
+  }
+  .point1,
+  .point2,
+  .point3 {
+    height: calc(75vh - 67.2px);
+    top: calc(67.2px + 25vh);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .aboutleftp {
+    font-size: 2.3rem;
+  }
+  .aboutleftsubp {
+    font-size: 0.9rem;
+  }
+  .aboutleft {
+    gap: 8px;
+  }
+  .point1H4 {
+    font-size: 1.3rem;
+  }
+  .point1P {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    max-width: 330px;
+  }
+  .point2 {
+    flex-direction: column;
+  }
+}

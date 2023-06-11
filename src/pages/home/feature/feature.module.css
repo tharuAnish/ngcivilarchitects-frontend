@@ -1,0 +1,39 @@
+.features {
+  padding-bottom: 5rem;
+  text-align: center;
+  margin-block: auto;
+  margin-top: 4rem;
+}
+
+.featureTitle {
+  font-size: 2.25rem;
+  margin-bottom: 8rem;
+}
+
+.featureTitle::after {
+  content: "";
+  width: 11rem;
+  height: 0.3rem;
+  background-color: var(--color-olive);
+  display: block;
+  margin-top: 0.6rem;
+  margin-inline: auto;
+}
+
+.featureContainner {
+  display: flex;
+  gap: 6rem 2rem;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1111px) {
+  .featureContainner {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .featureTitle {
+    font-size: 1.75rem;
+  }
+}
