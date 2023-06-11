@@ -1,14 +1,8 @@
 import styles from "./nav.module.css"
-import {
-  //   BrowserRouter as Router,
-  //   Routes,
-  //   Route,
-  //   NavLink,
-  Link,
-} from "react-router-dom"
+import { Link } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { MdMenu, MdClose } from "react-icons/md"
-import logo from "../../assets/ng-bgwhite.png"
+import logo from "../../assets/ngLogoBuildingWhite.png"
 import NavLink from "../navlink/navlink"
 
 export default function Nav() {
@@ -30,15 +24,14 @@ export default function Nav() {
               <div className={styles.img}>
                 <img src={logo} alt="logo" placeholder="blur" />
               </div>
-              <div>
-                <span className={styles.cann}>NG</span>group
-              </div>
+              <div>{/* <span className={styles.cann}>NG</span>group */}</div>
             </Link>
             <div className={styles.linkWrapper}>
               <NavLink link="/" content="Home" />
               <NavLink link="/services" content="Services" />
+              <NavLink link="/project" content="Projects" />
               <NavLink link="/about" content="About" />
-              <NavLink link="/project" content="Project" />
+              {/* <NavLink link="/team" content="Team" /> */}
               <NavLink link="/blogs" content="Blogs" />
               <Link href="/contact" className={styles.contactBtn}>
                 Contact
