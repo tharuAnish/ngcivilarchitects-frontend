@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import s from "./footer.module.css"
+import logo from "../../assets/ngLogoBuildingWhite.png"
 
 import {
   FaFacebook,
@@ -21,7 +22,8 @@ export default function Footer() {
               className={s.canwebe}
             >
               {/* <span className={s.can}>Can</span>WeBe! */}
-              Nammochhiya Group
+              {/* Nammochhiya Group */}
+              <img className={s.logo} src={logo} alt="logo" />
             </Link>
             <p className={s.topPara}>
               We assist you to remodel everyday problems into modern techy
@@ -83,7 +85,8 @@ export default function Footer() {
           </div>
 
           <div className={s.bottomRight}>
-            <h4 className={s.h4}>Follow Us:</h4>
+            {/* <h4 className={s.h4}>Follow Us:</h4> */}
+            <p>Follow Us:</p>
             <Link
               className={s.facebook}
               href="https://www.facebook.com/TeamCanWeBe"
