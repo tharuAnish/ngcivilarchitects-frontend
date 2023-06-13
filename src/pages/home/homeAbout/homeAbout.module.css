@@ -1,7 +1,7 @@
 .about {
   min-height: calc(100vh - 67.2px);
   display: flex;
-  flex-direction: row-reverse;
+  /* flex-direction: row-reverse; */
 
   background-color: var(--color-black-1);
   position: relative;
@@ -13,8 +13,8 @@
 }
 
 .aboutright {
-  background-color: var(--color-orange-deep);
-  color: #dedcdb;
+  background-color: var(--color-orange);
+  color: #fff5f5;
   width: 100%;
 }
 .aboutleft {
@@ -30,27 +30,27 @@
   background-color: #dedcdb;
 }
 .aboutImg {
-  max-width: 20rem;
-  width: 100%;
-  height: auto;
+  max-height: 14rem;
+  width: auto;
+  height: 100%;
   /* border: 0.23rem solid black; */
   border-radius: 2rem;
   overflow: hidden;
 }
 
 .aboutleftp {
-  font-size: 2.6rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
   font-weight: 600;
   margin-bottom: 1rem;
 }
 .aboutleftp::after {
   content: "";
-  width: 11rem;
-  height: 0.3rem;
-  background-color: var(--color-olive);
+  width: 9rem;
+  height: 0.25rem;
+  background-color: var(--color-orange-deep);
   display: block;
-  margin-top: 0rem;
+  margin-top: 0.2rem;
   margin-inline: auto;
 }
 .aboutleftsubp {
@@ -70,16 +70,19 @@
 }
 /* Latest Tech Point 1 */
 .point1Svg {
-  width: 200px;
+  width: 280px;
+}
+.point2Svg {
+  height: 250px;
 }
 
 .point3Svg {
-  width: 170px;
+  width: 280px;
 }
 .point1H4 {
   font-size: 1.5rem;
   margin: 10px 0;
-  color: #c25d5d;
+  color: black;
 }
 .point1P {
   font-size: 1.1rem;

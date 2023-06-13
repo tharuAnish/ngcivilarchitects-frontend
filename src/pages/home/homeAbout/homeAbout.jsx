@@ -1,6 +1,8 @@
 import styles from "./homeAbout.module.css"
 import ngLogo from "../../../assets/ngLogoBuildingWhite.png"
-import about1 from "../../../assets/company-workers.jpg"
+import about1 from "/company_about.png"
+import about2 from "/engineer_worker.png"
+import about3 from "/about3.png"
 
 export default function HomeAbout() {
   return (
@@ -9,7 +11,7 @@ export default function HomeAbout() {
         <p className={styles.aboutleftp}>About Us</p>
         <img className={styles.aboutImg} src={ngLogo} alt="NG-logo" />
         <p className={styles.aboutleftsubp}>
-          We are the best construction company.
+          We are the best construction company
         </p>
       </div>
       <div className={styles.aboutright}>
@@ -27,17 +29,16 @@ export default function HomeAbout() {
         </div>
         <div className={styles.point1}>
           <h4 className={styles.point1H4}>Building Dreams</h4>
+          <img className={styles.point2Svg} src={about2} alt="about image" />
           <p className={styles.point1P}>
-            <p className={styles.point1P}>
-              We are a construction company dedicated to turning your vision
-              into reality. With our expertise, we bring your dream projects to
-              life, creating spaces that inspire and delight.
-            </p>
+            We are a construction company dedicated to turning your vision into
+            reality. With our expertise, we bring your dream projects to life,
+            creating spaces that inspire and delight.
           </p>
         </div>
         <div className={styles.point3}>
-          <div className={styles.point3Svg}>{/* <FreeSvg /> */}</div>
           <h4 className={styles.point1H4}>Excellence in Construction</h4>
+          <img className={styles.point3Svg} src={about3} alt="about image" />
           <p className={styles.point1P}>
             At our core, we are driven by a passion for excellence. From concept
             to completion, we consistently deliver top-quality construction
