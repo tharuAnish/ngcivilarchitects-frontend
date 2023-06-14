@@ -19,7 +19,7 @@ export default function CarouselComponent() {
         <div>
           <img
             className="carousel-img zoomIn"
-            src="carousel1.jpg"
+            src="carousel1.webp"
             alt="Slide 1"
             loading="lazy"
           />

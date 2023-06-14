@@ -26,9 +26,10 @@ export default function Footer() {
               <img className={s.logo} src={logo} alt="logo" />
             </Link>
             <p className={s.topPara}>
-              We assist you to remodel everyday problems into modern techy
-              solution.We help the society by presenting cost-free cutting edge
-              applications.
+              We specialize in transforming everyday construction challenges
+              into innovative solutions. Our civil construction company is
+              dedicated to delivering modern, efficient, and high-quality
+              results that benefit our clients
             </p>
           </div>
 

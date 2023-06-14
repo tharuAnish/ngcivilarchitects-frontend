@@ -4,6 +4,7 @@ import Nav from "../../components/nav/nav"
 import Client from "./client/client"
 import Feature from "./feature/feature"
 import HomeAbout from "./homeAbout/homeAbout"
+import Testimony from "./testimony/testimony"
 
 export default function Home() {
   return (
@@ -12,7 +13,8 @@ export default function Home() {
       <Carousel />
       <Feature />
       <HomeAbout />
-      <Client />
+      <Testimony />
+      {/* <Client /> */}
       <Footer />
     </div>
   )
