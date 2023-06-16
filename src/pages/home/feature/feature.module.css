@@ -13,8 +13,8 @@
 .featureTitle::after {
   content: "";
   width: 11rem;
-  height: 0.3rem;
-  background-color: var(--color-olive);
+  height: 0.25rem;
+  background-color: var(--color-orange-deep);
   display: block;
   margin-top: 0.6rem;
   margin-inline: auto;

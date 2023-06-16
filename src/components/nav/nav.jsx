@@ -27,13 +27,13 @@ export default function Nav() {
               <div>{/* <span className={styles.cann}>NG</span>group */}</div>
             </Link>
             <div className={styles.linkWrapper}>
-              <NavLink link="/" content="Home" />
-              <NavLink link="/services" content="Services" />
-              <NavLink link="/project" content="Projects" />
-              <NavLink link="/about" content="About" />
+              <NavLink link="/" content="HOME" />
+              <NavLink link="/services" content="SERVICES" />
+              <NavLink link="/projects" content="PROJECTS" />
+              <NavLink link="/about" content="ABOUT" />
               {/* <NavLink link="/team" content="Team" /> */}
-              <NavLink link="/blogs" content="Blogs" />
-              <Link href="/contact" className={styles.contactBtn}>
+              <NavLink link="/blogs" content="BLOGS" />
+              <Link link="/contact" className={styles.contactBtn}>
                 Contact
               </Link>
             </div>
