@@ -1,0 +1,46 @@
+.servicesContainner {
+  text-align: center;
+  margin-block: 5rem;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.8rem;
+  margin-block: 5rem 2rem;
+}
+
+.service {
+  padding: 20px;
+  width: 330px;
+  min-height: 370px;
+  border-radius: 20px;
+  background: #e8e8e8;
+  box-shadow: 5px 5px 6px #dadada, -5px -5px 6px #f6f6f6;
+  transition: 0.4s;
+}
+
+.service:hover {
+  translate: 0 -10px;
+}
+
+.serviceTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2e54a7;
+  margin: 15px 0 0 10px;
+}
+
+.serviceImg {
+  min-height: 170px;
+  background-color: #c9c9c9;
+  border-radius: 15px;
+  box-shadow: inset 8px 8px 10px #c3c3c3, inset -8px -8px 10px #cfcfcf;
+}
+
+.serviceDesc {
+  margin: 13px 0 0 10px;
+  color: rgb(31, 31, 31);
+  font-size: 15px;
+}

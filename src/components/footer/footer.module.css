@@ -68,7 +68,7 @@
 }
 
 .linksList a {
-  font-size: 1rem;
+  font-size: 0.98rem;
   opacity: 0.5;
   transition: all 0.3s ease-in-out;
 }
@@ -85,7 +85,10 @@
 .bottomRight {
   display: flex;
   gap: 2rem;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+}
+.bottomLeft {
+  font-size: 1rem;
 }
 
 .facebook,
@@ -117,13 +120,13 @@
 }
 
 .linksList a:active {
-  color: var(--color-canwebe-deep);
+  color: var(--color-orange-deep);
   opacity: 1;
 }
 
 @media (hover: hover) {
   .footerLink:hover {
-    color: var(--color-canwebe-deep);
+    color: var(--color-orange-deep);
   }
 
   .facebook:hover {
@@ -145,7 +148,7 @@
   }
 
   .linksList a:is(:hover, :active) {
-    color: var(--color-canwebe-deep);
+    color: var(--color-orange-deep);
     opacity: 1;
   }
 }

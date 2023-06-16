@@ -4,7 +4,7 @@ import Nav from "../../components/nav/nav"
 import Client from "./client/client"
 import Feature from "./feature/feature"
 import HomeAbout from "./homeAbout/homeAbout"
-import Testimony from "./testimony/testimony"
+import Testimony from "../../components/testimony/testimony"
 
 export default function Home() {
   return (
