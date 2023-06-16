@@ -1,7 +1,7 @@
 .testimonials {
   height: 100%;
   min-height: 75vh;
-  width: 100vw;
+  width: 100%;
   background: url("testimonial_bg.png");
   background-repeat: no-repeat;
   background-size: cover;
