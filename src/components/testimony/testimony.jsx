@@ -1,4 +1,4 @@
-import { useFetch } from "../../../hooks/useFetch"
+import { useFetch } from "../../hooks/useFetch"
 import s from "./testimony.module.css"
 import { Carousel } from "react-responsive-carousel"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
@@ -13,7 +13,8 @@ export default function Testimony() {
     <div className={s.testimonials}>
       <div>
         <div className={s.testimonialsWrapper}>
-          <h1>Testimonials</h1>
+          <h2 className={s.h2}>Testimonials</h2>
+
           {isPending && <p>Loading...</p>}
           {error && <p>{error}</p>}
           <Carousel
@@ -24,6 +25,7 @@ export default function Testimony() {
             showArrows={true}
             showStatus={false}
             showThumbs={false}
+            showIndicators={false}
           >
             {testimonials &&
               testimonials.map((testimonial) => (
