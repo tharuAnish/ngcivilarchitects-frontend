@@ -35,22 +35,24 @@ export default function Services() {
           {isPending && <p>Loading...</p>}
           {error && <p>{error}</p>}
           {services &&
-            services.map((service) => (
-              <div className={s.service} key={service.id}>
-                <img
-                  className={s.serviceImg}
-                  src={`http://localhost:8000${service.s_pic}`}
-                  alt="service img"
-                />
-                <h2 className={s.serviceTitle}>{service.s_name}</h2>
-                <div
-                  className={s.serviceDesc}
-                  dangerouslySetInnerHTML={{
-                    __html: service.s_desc,
-                  }}
-                ></div>
-              </div>
-            ))}
+            services
+              .sort((a, b) => a.s_rank - b.s_rank) // Sort services based on s_rank in ascending order
+              .map((service) => (
+                <div className={s.service} key={service.id}>
+                  <img
+                    className={s.serviceImg}
+                    src={`http://localhost:8000${service.s_pic}`}
+                    alt="service img"
+                  />
+                  <h2 className={s.serviceTitle}>{service.s_name}</h2>
+                  <div
+                    className={s.serviceDesc}
+                    dangerouslySetInnerHTML={{
+                      __html: service.s_desc,
+                    }}
+                  ></div>
+                </div>
+              ))}
         </div>
       </div>
       <Testimony />

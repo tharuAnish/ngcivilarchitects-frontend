@@ -57,10 +57,10 @@ export default function Nav() {
             <NavLink link="/services" content="Services" />
           </div>
           <div onClick={() => setIsMenu(false)}>
-            <NavLink link="/about" content="About" />
+            <NavLink link="/projects" content="Project" />
           </div>
           <div onClick={() => setIsMenu(false)}>
-            <NavLink link="/project" content="Project" />
+            <NavLink link="/about" content="About" />
           </div>
           <div onClick={() => setIsMenu(false)}>
             <NavLink link="/blogs" content="Blogs" />

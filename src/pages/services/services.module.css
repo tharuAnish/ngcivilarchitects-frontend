@@ -45,7 +45,8 @@
   min-height: 370px;
   border-radius: 14px;
   background: #f0f0f0;
-  box-shadow: 5px 5px 6px #dadada, -5px -5px 6px #f6f6f6;
+  /* box-shadow: 5px 5px 6px #dadada, -5px -5px 6px #f6f6f6; */
+  box-shadow: 2px 5px 22px rgba(0, 0, 0, 0.199);
   transition: 0.4s;
 }
 
