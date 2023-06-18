@@ -1,0 +1,128 @@
+.h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+.h2::after {
+  content: "";
+  text-align: center;
+  margin-inline: auto;
+  width: 7rem;
+  height: 0.2rem;
+  background-color: var(--color-orange-deep);
+  display: block;
+  margin-top: 0.2rem;
+}
+
+.team {
+  display: flex;
+  width: 80%;
+  margin-inline: auto;
+  margin-block: 2rem;
+  max-height: 280px;
+  overflow: hidden;
+  align-items: center;
+  gap: 2rem;
+  border: 2px solid rgb(236, 233, 233);
+  border-radius: 1rem;
+  box-shadow: 2px 5px 22px rgba(0, 0, 0, 0.199);
+
+  transition: 0.4s ease;
+}
+.team:hover {
+  translate: 0 -6px;
+}
+
+.teamLeft {
+  flex-basis: 35%;
+  height: 100%;
+  width: auto;
+  overflow: hidden;
+}
+
+.teamRight {
+  flex-basis: 65%;
+  padding: 1rem 2rem 1rem 0rem;
+}
+
+.staffImg {
+  min-height: 300px;
+  object-fit: cover;
+}
+
+.staffName {
+  font-size: 1.5rem;
+  margin-block: 0.5rem;
+  color: rgb(17, 17, 17);
+}
+
+.staffPos {
+  font-size: 1.1rem;
+  opacity: 0.7;
+  font-weight: 600;
+}
+
+.staffDesc {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.staffLinks {
+  display: flex;
+  gap: 1.3rem;
+  color: rgb(99, 98, 98);
+  margin-top: 1rem;
+}
+
+.facebook,
+.twitter,
+.instagram,
+.linkedin,
+.youtube,
+.gmail {
+  transition: all 0.3s ease-in-out;
+  flex-shrink: 0;
+  color: rgb(99, 98, 98);
+  font-size: 1.4rem;
+}
+
+.facebook:active {
+  color: #1877f2;
+}
+
+.instagram:active {
+  color: #e1306c;
+}
+.twitter:active {
+  color: #1da1f2;
+}
+.linkedin:active {
+  color: #0077b5;
+}
+
+.gmail:active {
+  color: #c71610;
+}
+
+@media (hover: hover) {
+  .gmail:hover {
+    color: #c71610;
+  }
+
+  .facebook:hover {
+    color: #1877f2;
+  }
+
+  .instagram:hover {
+    color: #e1306c;
+  }
+  .twitter:hover {
+    color: #1da1f2;
+  }
+  .linkedin:hover {
+    color: #0077b5;
+  }
+
+  .youtube:hover {
+    color: #ff0000;
+  }
+}
