@@ -6,6 +6,7 @@ import Projects from "./pages/projects/projects"
 import About from "./pages/about/about"
 import Blogs from "./pages/blogs/blogs"
 import Contact from "./pages/contact/contact"
+import BlogDetails from "./pages/blogs/blogPage/blogDetails"
 // import "bootstrap/dist/css/bootstrap.min.css"
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs/:blogId" element={<BlogDetails />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Router>
