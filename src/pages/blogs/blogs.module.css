@@ -1,0 +1,75 @@
+.h2 {
+  margin-inline: auto;
+  margin-block: 2rem;
+  font-size: 2.5rem;
+}
+
+.blogs {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-block: 2rem;
+}
+
+.blog {
+  max-width: 40%;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: whitesmoke;
+  box-shadow: 2px 5px 22px rgba(0, 0, 0, 0.199);
+  transition: 0.4s ease;
+}
+.blog:hover {
+  translate: 0 -6px;
+}
+
+.img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.blogText {
+  padding: 1.5rem;
+}
+
+.name {
+  font-size: 1.4rem;
+}
+
+.desc {
+  margin-block: 0.5rem;
+}
+
+.button {
+  cursor: pointer;
+  font-weight: 700;
+  font-family: Helvetica, "sans-serif";
+  transition: all 0.2s;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: var(--color-orange-deep);
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  margin-block: 1rem 0.5rem;
+}
+
+.button:hover {
+  background: var(--color-orange-extradeep);
+}
+
+.icon {
+  font-size: 1.2rem;
+  margin-left: 0.2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.button:hover .icon {
+  transform: translateX(5px);
+}
+
+.button:active {
+  transform: scale(0.95);
+}

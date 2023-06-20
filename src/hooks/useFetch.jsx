@@ -8,6 +8,7 @@ export const useFetch = (url) => {
   useEffect(() => {
     // to abort the controller to abort the fetch
     const controller = new AbortController()
+    const signal = controller.signal
 
     const fetchData = async () => {
       setIsPending(true)
