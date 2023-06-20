@@ -8,14 +8,16 @@ export default function About() {
   return (
     <div>
       <Nav />
-      <div className={`${s.about} wrapper`}>
-        <div className={s.aboutHeader}>
-          <div className={s.headerLeft}>
-            <img className={s.logo} src={logo} alt="ng-logo" />
-          </div>
-          <div className={s.headerRight}>
-            <h4 className={s.h4}>NAMMOCHHIYA GROUP</h4>
-            <p>CIVIL & ARCHITECTS CONSULTING PVT.LTD</p>
+      <div className={s.about}>
+        <div className={s.headerBg}>
+          <div className={`${s.aboutHeader} wrapper`}>
+            <div className={s.headerLeft}>
+              <img className={s.logo} src={logo} alt="ng-logo" />
+            </div>
+            <div className={s.headerRight}>
+              <h4 className={s.h4}>NAMMOCHHIYA GROUP</h4>
+              <p>CIVIL & ARCHITECTS CONSULTING PVT.LTD</p>
+            </div>
           </div>
         </div>
       </div>

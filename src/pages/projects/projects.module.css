@@ -1,0 +1,58 @@
+.projectRow {
+  display: flex;
+  flex-direction: row;
+  max-width: 80%;
+  margin-inline: auto;
+  gap: 3rem;
+  margin-block: 5rem;
+  height: 320px;
+}
+.projectRowReverse {
+  display: flex;
+  flex-direction: row-reverse;
+  max-width: 80%;
+  margin-inline: auto;
+  gap: 3rem;
+  margin-block: 5rem;
+  height: 320px;
+}
+
+.projectImg {
+  flex-basis: 40%;
+}
+.img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.projectDetail {
+  flex-basis: 60%;
+  margin-block: auto;
+}
+
+.projectType {
+  font-size: 1.02rem;
+  color: #645f5f;
+  margin-block: 0.5rem;
+  font-weight: 600;
+}
+
+.projectName {
+  font-size: 2.1rem;
+  margin-block: 0.5rem;
+  color: rgb(17, 17, 17);
+}
+
+.projectDesc {
+  font-size: 1.15rem;
+  color: #645f5f;
+  margin-block: 0.5rem 1.5rem;
+}
+
+.projectPoint {
+  color: #645f5f;
+  margin: 0.3rem 0rem;
+  list-style-type: circle;
+  font-size: 1.15rem;
+}

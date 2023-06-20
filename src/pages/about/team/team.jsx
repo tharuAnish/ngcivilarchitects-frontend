@@ -13,7 +13,7 @@ export default function Team() {
   const sortedTeams = [...teams].sort((a, b) => a.staff_rank - b.staff_rank)
 
   return (
-    <div className="wrapper">
+    <div className={`${s.teams}wrapper`}>
       <h2 className={s.h2}>Our Team</h2>
       {isPending && <p>Loading...</p>}
       {error && <p>{error}</p>}
