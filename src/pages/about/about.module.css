@@ -1,3 +1,19 @@
+.headerBg {
+  width: 100%;
+  /* background: url("bg-blueprint1.jpg"); */
+  /* background: rgb(223, 109, 43);
+  background: linear-gradient(
+    90deg,
+    rgba(223, 109, 43, 1) 0%,
+    rgba(245, 151, 32, 1) 81%,
+    rgba(223, 165, 1, 1) 100%
+  ); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-inline: auto;
+}
+
 .aboutHeader {
   display: flex;
   width: 100%;

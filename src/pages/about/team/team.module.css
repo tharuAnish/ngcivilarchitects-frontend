@@ -1,3 +1,7 @@
+.teams {
+  margin-top: 3rem;
+}
+
 .h2 {
   font-size: 2rem;
   text-align: center;
@@ -47,6 +51,7 @@
 .staffImg {
   min-height: 300px;
   object-fit: cover;
+  /* width: 100%; */
 }
 
 .staffName {
