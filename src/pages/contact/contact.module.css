@@ -1,0 +1,60 @@
+.contact {
+  margin-block: 3rem;
+}
+
+/* Quick Contact */
+
+.quickTitle {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.quickContact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 4rem;
+  margin-block: 2rem;
+}
+
+.quickContainner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+  background-color: rgb(233, 233, 233);
+  box-shadow: 2px 5px 22px rgba(0, 0, 0, 0.199);
+  cursor: pointer;
+  transition: 0.4s ease;
+  min-width: 320px;
+  color: black;
+  border-radius: 7px;
+}
+.quickContainner:hover {
+  translate: 0 -6px;
+}
+
+.QCicon {
+  font-size: 2rem;
+}
+
+.companyName {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.mapTitle {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.map {
+  height: 450px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.39);
+}
