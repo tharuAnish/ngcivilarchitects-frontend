@@ -15,6 +15,7 @@ export default function Team() {
   return (
     <div className={`${s.teams}wrapper`}>
       <h2 className={s.h2}>Our Team</h2>
+      <p className={s.teamSubHeader}>Introducing Our Skilled Team Members</p>
       {isPending && <p>Loading...</p>}
       {error && <p>{error}</p>}
       {teams &&

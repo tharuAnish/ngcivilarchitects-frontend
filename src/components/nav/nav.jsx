@@ -33,7 +33,11 @@ export default function Nav() {
               <NavLink link="/about" content="ABOUT" />
               {/* <NavLink link="/team" content="Team" /> */}
               <NavLink link="/blogs" content="BLOGS" />
-              <Link link="/contact" className={styles.contactBtn}>
+              <Link
+                to="/contact"
+                className={styles.contactBtn}
+                content="Contact"
+              >
                 Contact
               </Link>
             </div>
@@ -66,7 +70,7 @@ export default function Nav() {
             <NavLink link="/blogs" content="Blogs" />
           </div>
 
-          <Link href="/form/contact" className={styles.contactBtn}>
+          <Link href="/contact" className={styles.contactBtn}>
             Contact
           </Link>
         </div>

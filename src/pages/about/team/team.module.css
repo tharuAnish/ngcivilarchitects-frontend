@@ -17,11 +17,18 @@
   margin-top: 0.2rem;
 }
 
+.teamSubHeader {
+  font-size: 1.2rem;
+  text-align: center;
+  opacity: 0.8;
+  margin-block: 1rem;
+}
+
 .team {
   display: flex;
-  width: 80%;
+  width: 75%;
   margin-inline: auto;
-  margin-block: 2rem;
+  margin-block: 4rem;
   max-height: 280px;
   overflow: hidden;
   align-items: center;
@@ -69,6 +76,7 @@
 .staffDesc {
   font-size: 1rem;
   opacity: 0.8;
+  text-align: justify;
 }
 
 .staffLinks {
