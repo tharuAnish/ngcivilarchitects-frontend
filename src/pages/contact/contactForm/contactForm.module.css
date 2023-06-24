@@ -1,0 +1,176 @@
+.formContainner {
+  width: 80%;
+  display: flex;
+  margin-inline: auto;
+  border-radius: 0.5rem;
+  box-shadow: 2px 5px 22px rgba(0, 0, 0, 0.199);
+  align-items: center;
+  margin-block: 1rem 2rem;
+}
+
+.leftForm {
+  flex-basis: 50%;
+  /* padding: 0.5rem 0 2rem 3.4rem; */
+  padding-inline: 3.4rem 0;
+}
+
+.nglogo {
+  height: 140px;
+  margin-inline: auto;
+}
+
+.formH4 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin-block: 1rem;
+  text-align: center;
+  color: #000;
+}
+
+.formPara {
+  font-size: 1.025rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-align: justify;
+  opacity: 0.9;
+  line-height: 1.5rem;
+}
+
+.rightForm {
+  flex-basis: 50%;
+}
+
+.form {
+  background-color: #fff;
+  display: block;
+  padding: 1rem;
+  max-width: 400px;
+  border-radius: 0.5rem;
+  border: 0.5px solid #e5e7eb;
+  margin-block: 3rem;
+  margin-inline: auto;
+}
+
+.form-title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  color: #000;
+}
+
+.inputContainer {
+  position: relative;
+}
+
+.inputContainer,
+.form button,
+.textArea {
+  outline: none;
+  border: 1px solid #e5e7eb;
+  margin: 8px 0;
+}
+
+.inputContainer {
+  background-color: #fff;
+  padding: 1rem;
+  padding-right: 3rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.textArea {
+  width: 100%;
+  height: 170px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+  font-size: 16px;
+  resize: none;
+}
+
+.submit {
+  display: block;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  background-color: #4f46e5;
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  width: 100%;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+.submit:hover {
+  background-color: #2119b8;
+}
+
+/* follow us */
+
+.mediaLinks {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.1rem;
+}
+
+.facebook,
+.twitter,
+.instagram,
+.linkedin,
+.youtube,
+.footerLink {
+  transition: all 0.3s ease-in-out;
+  flex-shrink: 0;
+  color: #646464;
+  font-size: 1.4rem;
+}
+
+.facebook:active {
+  color: #1877f2;
+}
+
+.instagram:active {
+  color: #e1306c;
+}
+.twitter:active {
+  color: #1da1f2;
+}
+.linkedin:active {
+  color: #0077b5;
+}
+
+.youtube:active {
+  color: #ff0000;
+}
+
+@media (hover: hover) {
+  .footerLink:hover {
+    color: var(--color-orange-deep);
+  }
+
+  .facebook:hover {
+    color: #1877f2;
+  }
+
+  .instagram:hover {
+    color: #e1306c;
+  }
+  .twitter:hover {
+    color: #1da1f2;
+  }
+  .linkedin:hover {
+    color: #0077b5;
+  }
+
+  .youtube:hover {
+    color: #ff0000;
+  }
+}

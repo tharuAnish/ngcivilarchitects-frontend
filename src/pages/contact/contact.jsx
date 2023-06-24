@@ -18,6 +18,8 @@ export default function Contact() {
         headerH2="CONTACT US"
         headerP="We love to hear from you!"
       />
+      <h4 className={s.contactTitle}>Hire Us Today</h4>
+      <ContactForm />
       <div className={`${s.contact} wrapper`}>
         <h4 className={s.quickTitle}>Quick Contact</h4>
         <div className={s.quickContact}>
@@ -30,7 +32,12 @@ export default function Contact() {
               <p>+977 9854876211</p>
             </div>
           </div>
-          <div className={s.quickContainner}>
+          <Link
+            to="https://mail.google.com/mail/?view=cm&fs=1&to=ngcivilarchitectures@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={s.quickContainner}
+          >
             <div className={s.QCicon}>
               <AiOutlineMail />
             </div>
@@ -38,7 +45,7 @@ export default function Contact() {
               <p className={s.companyName}>Company Email</p>
               <p>ngcivilarchitects@gmail.com</p>
             </div>
-          </div>
+          </Link>
           <Link
             to="https://goo.gl/maps/Qoub1dkW1AMmFb83A"
             target="blank"
@@ -67,7 +74,6 @@ export default function Contact() {
         />
       </div>
 
-      <ContactForm />
       <Footer />
     </>
   )
