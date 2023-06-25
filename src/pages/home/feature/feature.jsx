@@ -7,7 +7,7 @@ import { FaFeather } from "react-icons/fa"
 export default function Features() {
   return (
     <div className={`${Styles.features} wrapper`}>
-      <h2 className={Styles.featureTitle}>What make us different!</h2>
+      <h4 className={Styles.featureTitle}>What make us different!</h4>
       <div className={Styles.featureContainner}>
         <FeatureCard
           cardTitle="Expertise and Experience"

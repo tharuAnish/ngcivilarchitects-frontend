@@ -1,11 +1,28 @@
+/* .projects {
+  margin-block: 2rem;
+}
+
+.projects::after {
+  content: "";
+  width: 70%;
+  height: 0.07rem;
+  background-color: var(--color-black-2);
+  display: block;
+  margin-top: 0rem;
+  margin-inline: auto;
+} */
+
 .projectRow {
+  max-width: 80%;
   display: flex;
   flex-direction: row;
-  max-width: 80%;
   margin-inline: auto;
   gap: 3rem;
   margin-block: 5rem;
   height: 320px;
+  background-color: rgb(238, 238, 238);
+  border-radius: 0.8rem;
+  overflow: hidden;
 }
 .projectRowReverse {
   display: flex;
@@ -29,6 +46,7 @@
 .projectDetail {
   flex-basis: 60%;
   margin-block: auto;
+  padding-inline: 2rem;
 }
 
 .projectType {
@@ -41,12 +59,12 @@
 .projectName {
   font-size: 2.1rem;
   margin-block: 0.5rem;
-  color: rgb(17, 17, 17);
+  color: rgba(27, 27, 27, 0.938);
 }
 
 .projectDesc {
   font-size: 1.15rem;
-  color: #645f5f;
+  color: #414141;
   margin-block: 0.5rem 1.5rem;
 }
 

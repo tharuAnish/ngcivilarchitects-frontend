@@ -1,12 +1,18 @@
-.h2 {
-  margin-inline: auto;
-  margin-block: 2rem;
-  font-size: 2.5rem;
+.projectWrapper {
+  /* height: 70vh; */
+  margin-block: 3rem 4rem;
 }
 
-.h2::after {
+.h4 {
+  font-size: 2.25rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+  margin-inline: auto;
+  text-align: center;
+}
+.h4::after {
   content: "";
-  width: 6rem;
+  width: 11rem;
   height: 0.25rem;
   background-color: var(--color-orange-deep);
   display: block;
@@ -14,41 +20,40 @@
   margin-inline: auto;
 }
 
-.blogs {
+.projects {
+  width: auto;
   display: flex;
-  justify-content: space-evenly;
   flex-wrap: wrap;
-  margin-block: 2rem;
+  justify-content: space-between;
 }
 
-.blog {
-  max-width: 40%;
-  border-radius: 1rem;
-  overflow: hidden;
-  background-color: whitesmoke;
+.project {
+  background-color: rgb(241, 241, 241);
+  padding: 10px;
+  border-radius: 14px;
   box-shadow: 2px 5px 22px rgba(0, 0, 0, 0.199);
-  transition: 0.4s ease;
-}
-.blog:hover {
-  translate: 0 -6px;
 }
 
+.projectImg {
+  height: 300px;
+  width: 380px;
+  overflow: hidden;
+  border-radius: 7px;
+  overflow: hidden;
+}
 .img {
+  height: 100%;
   width: 100%;
-  height: 20rem;
   object-fit: cover;
 }
 
-.blogText {
-  padding: 1.5rem;
-}
-
-.name {
-  font-size: 1.4rem;
-}
-
 .desc {
-  margin-block: 0.5rem;
+  opacity: 0.7;
+  margin: 1rem 1rem 1.5rem;
+}
+
+.projectName {
+  margin-block: 0.2rem 0.5rem;
 }
 
 .button {
@@ -56,14 +61,16 @@
   font-weight: 700;
   font-family: Helvetica, "sans-serif";
   transition: all 0.2s;
-  padding: 10px 20px;
+  padding: 13px 26px;
   border-radius: 100px;
   background: var(--color-orange);
   border: 1px solid transparent;
   display: flex;
   align-items: center;
   font-size: 15px;
-  margin-block: 1rem 0.5rem;
+  margin-top: 2rem;
+  margin-inline: auto;
+  width: 8.5rem;
 }
 
 .button:hover {

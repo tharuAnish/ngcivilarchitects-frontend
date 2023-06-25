@@ -17,7 +17,7 @@ export default function About() {
             </div>
             <div className={s.headerRight}>
               <h4 className={s.h4}>NAMMOCHHIYA GROUP</h4>
-              <p>CIVIL & ARCHITECTS CONSULTING PVT.LTD</p>
+              <p className={s.ngP}>CIVIL & ARCHITECTS CONSULTING PVT.LTD</p>
             </div>
           </div>
         </div>

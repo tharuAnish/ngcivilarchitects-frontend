@@ -25,7 +25,7 @@ export default function CarouselComponent() {
           />
           <div className="carousel-text">
             <p className="carousel-subline">
-              A civil and Architectural Engineering Consultancy
+              A Civil and Architectural Engineering Consultancy
             </p>
             <h1 className="carousel-h1">Welcome to NG-group</h1>
             <p className="carousel-para">
