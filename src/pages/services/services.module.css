@@ -9,7 +9,8 @@
 }
 
 .titleH2 {
-  font-size: 2.2rem;
+  font-size: 2.25rem;
+  font-weight: 500;
 }
 
 .titleH2::after {
@@ -35,14 +36,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.8rem;
+  gap: 4rem 2rem;
   margin-block: 5rem 2rem;
 }
 
 .service {
   padding: 12px;
-  width: 330px;
-  min-height: 370px;
+  width: 350px;
+  min-height: 380px;
   border-radius: 14px;
   background: #f0f0f0;
   /* box-shadow: 5px 5px 6px #dadada, -5px -5px 6px #f6f6f6; */
@@ -55,14 +56,15 @@
 }
 
 .serviceTitle {
-  font-size: 18px;
+  font-size: 1.4rem;
   font-weight: 600;
   color: #2e54a7;
-  margin: 15px 0 0 10px;
+  margin-inline: 0.8rem;
+  margin-block: 1.5rem 1rem;
 }
 
 .serviceImg {
-  max-height: 170px;
+  max-height: 200px;
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -72,7 +74,9 @@
 }
 
 .serviceDesc {
-  margin: 13px 0 0 10px;
-  color: rgb(31, 31, 31);
-  font-size: 15px;
+  margin-inline: 0.8rem;
+  margin-block: 1rem 1.5rem;
+  color: rgb(22, 22, 22);
+  font-size: 0.98rem;
+  line-height: 1.3rem;
 }

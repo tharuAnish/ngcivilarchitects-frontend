@@ -75,8 +75,8 @@
 
 .staffDesc {
   font-size: 1rem;
-  opacity: 0.8;
   text-align: justify;
+  color: var(--color-text-darkgrey);
 }
 
 .staffLinks {

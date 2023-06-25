@@ -1,4 +1,5 @@
 import Footer from "../../components/footer/footer"
+import Loading from "../../components/loading/loading"
 import Nav from "../../components/nav/nav"
 import Header from "../../components/pageHeader/header"
 import Tagline from "../../components/tagline/tagline"
@@ -26,40 +27,42 @@ export default function Projects() {
         headerP={"Building Excellence, Inspiring Futures"}
       />
       <div className={`${s.projectWrapper} wrapper`}>
-        {isPending && <p>Loading...</p>}
+        {isPending && <Loading />}
         {error && <p>{error}</p>}
         {projects &&
           sortedProjects.map((project) => {
             currentIndex++ // Increment the currentIndex for each iteration
 
             return (
-              <div
-                key={project.id}
-                className={`${s.projectRow} ${
-                  currentIndex % 2 === 0 ? s.projectRow : s.projectRowReverse
-                }`}
-              >
-                <div className={s.projectImg}>
-                  <img
-                    className={s.img}
-                    src={`http://localhost:8000${project.p_pic}`}
-                    alt="project img"
-                  />
-                </div>
-                <div className={s.projectDetail}>
-                  <p className={s.projectType}>{project.p_type}</p>
-                  <h4 className={s.projectName}>{project.p_name}</h4>
-                  <div
-                    className={s.projectDesc}
-                    dangerouslySetInnerHTML={{ __html: project.p_desc }}
-                  />
-                  <li className={s.projectPoint}>{project.p_point1}</li>
-                  {project.p_point2 && (
-                    <li className={s.projectPoint}>{project.p_point2}</li>
-                  )}
-                  {project.p_point3 && (
-                    <li className={s.projectPoint}>{project.p_point3}</li>
-                  )}
+              <div className={s.projects}>
+                <div
+                  key={project.id}
+                  className={`${s.projectRow} ${
+                    currentIndex % 2 === 0 ? s.projectRow : s.projectRowReverse
+                  }`}
+                >
+                  <div className={s.projectImg}>
+                    <img
+                      className={s.img}
+                      src={`http://localhost:8000${project.p_pic}`}
+                      alt="project img"
+                    />
+                  </div>
+                  <div className={s.projectDetail}>
+                    <p className={s.projectType}>{project.p_type}</p>
+                    <h4 className={s.projectName}>{project.p_name}</h4>
+                    <div
+                      className={s.projectDesc}
+                      dangerouslySetInnerHTML={{ __html: project.p_desc }}
+                    />
+                    <li className={s.projectPoint}>{project.p_point1}</li>
+                    {project.p_point2 && (
+                      <li className={s.projectPoint}>{project.p_point2}</li>
+                    )}
+                    {project.p_point3 && (
+                      <li className={s.projectPoint}>{project.p_point3}</li>
+                    )}
+                  </div>
                 </div>
               </div>
             )

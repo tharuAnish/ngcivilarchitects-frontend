@@ -47,7 +47,7 @@
   cursor: pointer;
   transition: 0.4s ease;
   min-width: 320px;
-  color: black;
+  color: var(--color-text-darkgrey);
   border-radius: 7px;
   margin-block: 0.8rem 3rem;
 }

@@ -3,6 +3,7 @@ import s from "./testimony.module.css"
 import { Carousel } from "react-responsive-carousel"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { RiDoubleQuotesL } from "react-icons/ri"
+import Loading from "../loading/loading"
 
 export default function Testimony() {
   const url = "http://127.0.0.1:8000/api/testimonials/"
@@ -13,9 +14,9 @@ export default function Testimony() {
     <div className={s.testimonials}>
       <div>
         <div className={s.testimonialsWrapper}>
-          <h2 className={s.h2}>Testimonials</h2>
+          <h4 className={s.h4}>Testimonials</h4>
 
-          {isPending && <p>Loading...</p>}
+          {isPending && <Loading />}
           {error && <p>{error}</p>}
           <Carousel
             infiniteLoop

@@ -6,6 +6,7 @@ import s from "./services.module.css"
 import { useFetch } from "../../hooks/useFetch"
 import Footer from "../../components/footer/footer"
 import Tagline from "../../components/tagline/tagline"
+import Loading from "../../components/loading/loading"
 
 export default function Services() {
   const url = "http://127.0.0.1:8000/api/services/"
@@ -31,8 +32,9 @@ export default function Services() {
           home or transform your commercial space, trust NG-Group for top-notch
           construction services that exceed expectations. */}
         </p>
+
         <div className={s.services}>
-          {isPending && <p>Loading...</p>}
+          {isPending && <Loading />}
           {error && <p>{error}</p>}
           {services &&
             services
@@ -40,6 +42,7 @@ export default function Services() {
               .map((service) => (
                 <div className={s.service} key={service.id}>
                   <img
+                    loading="lazy"
                     className={s.serviceImg}
                     src={`http://localhost:8000${service.s_pic}`}
                     alt="service img"
@@ -57,7 +60,7 @@ export default function Services() {
       </div>
       <Testimony />
       <Tagline
-        tagH4="We Are Provinding Best Construction Services"
+        tagH4="We Provide Best Construction Services"
         tagP="Crafting Perfection: Elevating Construction Standards with Uncompromising Quality and Unparalleled Expertise"
       />
 

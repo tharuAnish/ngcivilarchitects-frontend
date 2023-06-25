@@ -44,6 +44,7 @@
 .carousel-h1 {
   text-transform: uppercase;
   font-size: 2.5rem;
+  font-weight: 500;
   margin: 3px 0 12px;
   filter: drop-shadow(2px 4px 6px black);
 }
@@ -56,9 +57,10 @@
 .carousel-para {
   width: 75%;
   margin-bottom: 14px;
-  font-size: 1.1rem;
-  line-height: 24px;
-  filter: drop-shadow(2px 4px 6px black);
+  font-size: 1.08rem;
+  line-height: 25px;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.918));
+  font-weight: 300;
 }
 
 .carouselBtnDiv {
@@ -80,14 +82,14 @@
 
 .carouselBtnContact {
   border-radius: 40px;
-  border: 1px solid #dba3a3;
+  border: 1px solid var(--color-white);
   padding: 9px 30px;
-  color: #dba3a3;
+  color: var(--color-white);
 }
 
 .carouselBtnContact:active {
-  background-color: #dba3a3;
-  color: #000;
+  background-color: var(--color-white);
+  color: #1a1a1a;
   transform: scale(0.96);
   border-color: white;
 }
@@ -105,7 +107,7 @@
 
 @media (hover: hover) {
   .carouselBtnContact:hover {
-    background-color: #dba3a3;
+    background-color: var(--color-white);
     color: #000;
   }
   .carouselBtnContact:active {

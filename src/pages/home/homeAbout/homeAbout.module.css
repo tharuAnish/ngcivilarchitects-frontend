@@ -14,7 +14,7 @@
 
 .aboutright {
   background-color: var(--color-orange);
-  color: #fff5f5;
+  color: #e7e7e7;
   width: 100%;
 }
 .aboutleft {
@@ -38,19 +38,19 @@
   overflow: hidden;
 }
 
-.aboutleftp {
-  font-size: 2.2rem;
+.aboutleftH4 {
+  font-size: 2.25rem;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 1rem;
 }
-.aboutleftp::after {
+.aboutleftH4::after {
   content: "";
   width: 9rem;
   height: 0.25rem;
   background-color: var(--color-orange-deep);
   display: block;
-  margin-top: 0.2rem;
+  margin-top: 0.3rem;
   margin-inline: auto;
 }
 .aboutleftsubp {
@@ -80,9 +80,10 @@
   height: 250px;
 }
 .point1H4 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 500;
   margin: 10px 0;
-  color: black;
+  color: rgba(0, 0, 0, 0.856);
 }
 .point1P {
   font-size: 1.1rem;

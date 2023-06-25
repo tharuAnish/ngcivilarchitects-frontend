@@ -19,58 +19,71 @@
   margin-inline: auto;
   font-size: 2rem;
   font-weight: 400;
-  color: rgba(240, 240, 240, 0.944);
+  color: rgba(240, 240, 240, 0.925);
   margin-block: 1rem;
 }
 
 .tagP {
   text-align: center;
   margin-inline: 2rem;
-  color: rgba(228, 228, 228, 0.922);
+  color: rgba(240, 240, 240, 0.959);
   font-size: 1rem;
   margin-block: 1rem 2rem;
 }
 
-.tagBtn {
+.contactBtn {
+  /* margin: 0 20px; */
+  padding: 11px 24px;
   font-size: 1rem;
-  text-transform: uppercase;
-  padding: 11px 18px;
-  display: inline-block;
-  border-radius: 6em;
-  transition: all 0.2s;
+  border-radius: 30px;
+  border: none;
   background-color: white;
+  color: black;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  width: 8rem;
   margin-inline: auto;
-  color: rgba(0, 0, 0, 0.836);
 }
 
-.tagBtn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.tagBtn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.tagBtn::after {
+.contactBtn::after {
+  position: absolute;
   content: "";
-  display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 100px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 0.4s;
+  border: 2px solid var(--color-white);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 30px;
+  transition: transform 0.2s ease-in-out;
 }
 
-.tagBtn::after {
-  background-color: #fff;
+@media (hover: hover) {
+  .contactBtn:hover {
+    transform: scale(0.9);
+  }
+  .contactBtn:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+    padding: 4px;
+  }
+  .contactBtn:active {
+    background-color: var(--color-orange-deep);
+    color: white;
+  }
 }
 
-.tagBtn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
+.contactBtn:active {
+  transform: scale(0.9);
+}
+
+.contactBtn:active::after {
+  transform: translate(-50%, -50%) scale(1);
+  padding: 4px;
+}
+
+@media screen and (max-width: 885px) {
+  .contactBtn {
+    margin-top: 25px;
+    font-size: 1.2rem;
+  }
 }

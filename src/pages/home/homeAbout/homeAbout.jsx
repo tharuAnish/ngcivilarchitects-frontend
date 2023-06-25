@@ -8,7 +8,7 @@ export default function HomeAbout() {
   return (
     <section className={styles.about}>
       <div className={styles.aboutleft}>
-        <p className={styles.aboutleftp}>About Us</p>
+        <h4 className={styles.aboutleftH4}>About Us</h4>
         <img className={styles.aboutImg} src={ngLogo} alt="NG-logo" />
         <p className={styles.aboutleftsubp}>
           We are the best construction company
