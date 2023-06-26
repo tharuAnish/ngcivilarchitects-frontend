@@ -17,7 +17,7 @@ export default function BlogDetails() {
     <>
       <Nav />
       <Header
-        headerH2="Blog"
+        headerH2="BLOG"
         headerP="A Glimpse into the Construction Realm"
         headerImg={headerImage}
       />

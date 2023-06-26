@@ -32,7 +32,7 @@ export default function Blogs() {
     <>
       <Nav />
       <Header
-        headerH2="Blogs"
+        headerH2="BLOGS"
         headerP="A Glimpse into the Construction Realm"
         headerImg={headerImage}
       />

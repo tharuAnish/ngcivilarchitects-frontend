@@ -41,6 +41,7 @@
 
 .blogText {
   padding: 1.5rem;
+  color: var(--color-text-darkgrey);
 }
 
 .name {
@@ -64,6 +65,7 @@
   align-items: center;
   font-size: 15px;
   margin-block: 1rem 0.5rem;
+  color: var(--color-text-darkgrey);
 }
 
 .button:hover {

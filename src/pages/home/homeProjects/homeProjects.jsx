@@ -42,8 +42,7 @@ export default function HomeProjects() {
           })}
       </div>
       <Link className={s.button} to="/projects">
-        View All
-        <BsArrowRightCircle className={s.icon} />
+        View All <BsArrowRightCircle className={s.icon} />
       </Link>
     </div>
   )
