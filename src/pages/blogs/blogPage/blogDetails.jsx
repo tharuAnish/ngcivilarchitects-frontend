@@ -4,7 +4,7 @@ import Nav from "../../../components/nav/nav"
 import { useFetch } from "../../../hooks/useFetch"
 import s from "./blogDetails.module.css"
 import Header from "../../../components/pageHeader/header"
-import headerImage from "/carousel1.webp"
+import headerImage from "/blog_header.webp"
 import { MdDateRange } from "react-icons/md"
 import { FaTags } from "react-icons/fa"
 

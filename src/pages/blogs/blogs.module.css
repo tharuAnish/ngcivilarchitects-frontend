@@ -23,7 +23,7 @@
 }
 
 .blog {
-  max-width: 40%;
+  max-width: 500px;
   /* box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05); */
   box-shadow: 2px 5px 22px rgba(0, 0, 0, 0.199);
@@ -101,4 +101,29 @@
 
 .button:active {
   transform: scale(0.95);
+}
+
+@media screen and (max-width: 720px) {
+  .project {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .blogs {
+    flex-direction: column;
+  }
+  .blog {
+    max-width: 95%;
+    margin-inline: auto;
+  }
+  .subText {
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 14px;
+  }
+  .desc {
+    font-weight: normal;
+    font-size: 15px;
+  }
 }
