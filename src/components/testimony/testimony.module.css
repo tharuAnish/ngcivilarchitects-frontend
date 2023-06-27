@@ -1,12 +1,10 @@
 .testimonials {
-  height: 100%;
-  min-height: 75vh;
+  max-height: 600px;
   width: 100%;
   background: url("testimonial_bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  margin-inline: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,6 +12,8 @@
 }
 
 .testimonialsWrapper {
+  margin-block: 2rem;
+  margin-inline: auto;
   max-width: 820px;
   width: 100%;
   width: 80vw;
@@ -61,4 +61,22 @@
   font-size: 0.95rem;
   color: rgba(17, 17, 17, 0.836);
   margin-block: 0.3rem;
+}
+
+@media screen and (max-width: 700px) {
+  .testimonialsWrapper {
+    max-width: 100%;
+  }
+  .clientDesc {
+    max-width: 95vw;
+    margin-inline: auto;
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .h4 {
+    font-size: 2rem;
+  }
 }

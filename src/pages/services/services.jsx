@@ -1,5 +1,5 @@
 import Nav from "../../components/nav/nav"
-import headerImage from "/carousel2.jpg"
+import headerImage from "/serviceworker.webp"
 import Testimony from "../../components/testimony/testimony"
 import Header from "../../components/pageHeader/header"
 import s from "./services.module.css"

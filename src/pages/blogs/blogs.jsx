@@ -5,8 +5,10 @@ import { useFetch } from "../../hooks/useFetch"
 import s from "./blogs.module.css"
 import Footer from "../../components/footer/footer"
 import Header from "../../components/pageHeader/header"
-import headerImage from "/carousel1.webp"
+import headerImage from "/blog_header.webp"
 import { BsArrowRightCircle } from "react-icons/bs"
+import { MdDateRange } from "react-icons/md"
+import { FaTags } from "react-icons/fa"
 
 export default function Blogs() {
   const url = "http://127.0.0.1:8000/api/blog/"
@@ -21,11 +23,15 @@ export default function Blogs() {
     navigate(`/blogs/${blogId}`)
   }
 
-  // to shortern word
-  const getShortenedDescription = (description, wordCount) => {
-    const words = description.split(" ")
-    const shortenedWords = words.slice(0, wordCount)
-    return shortenedWords.join(" ")
+  // Function to format the timestamp
+  const formatDate = (timestamp) => {
+    const date = new Date(timestamp)
+    const formattedDate = date.toLocaleDateString("en-US", {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    })
+    return formattedDate
   }
 
   return (
@@ -49,16 +55,21 @@ export default function Blogs() {
                 alt="blog img"
               />
               <div className={s.blogText}>
+                <div className={s.subText}>
+                  <div className={s.subTextContainner}>
+                    <MdDateRange />
+                    <p className={s.date}>{formatDate(blog.timestamp)}</p>{" "}
+                  </div>
+                  <div className={s.subTextContainner}>
+                    {" "}
+                    <FaTags />
+                    <p className={s.tags}>{blog.tags}</p>
+                  </div>
+                </div>
+                <hr className={s.hr} />
                 <h4 className={s.name}>{blog.b_name}</h4>
-                <p className={s.type}>{blog.b_type}</p>
-                <div
-                  className={s.desc}
-                  dangerouslySetInnerHTML={{
-                    __html: getShortenedDescription(blog.b_desc, 10),
-                  }}
-                />
+                <p className={s.desc}>{blog.short_desc}</p>
 
-                <p className={s.date}>{blog.b_date}</p>
                 <button
                   className={s.button}
                   onClick={() => handleBlogClick(blog.id)}

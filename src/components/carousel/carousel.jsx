@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef } from "react"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { Carousel } from "react-responsive-carousel"
 import "./carousel.css"
@@ -15,6 +15,7 @@ export default function CarouselComponent() {
         interval={5000}
         transitionTime={1000}
         useKeyboardArrows
+        swipeable={false} // Disable default swipe gesture handling
       >
         <div>
           <img
@@ -25,9 +26,9 @@ export default function CarouselComponent() {
           />
           <div className="carousel-text">
             <p className="carousel-subline">
-              A Civil and Architectural Engineering Consultancy
+              A Civil & Architectural Engineering Consultancy
             </p>
-            <h1 className="carousel-h1">Welcome to NG-group</h1>
+            <h1 className="carousel-h1">WELCOME TO NG</h1>
             <p className="carousel-para">
               Experienced construction company dedicated to delivering
               exceptional results. We specialize in residential and commercial
@@ -35,11 +36,11 @@ export default function CarouselComponent() {
               your vision to life.
             </p>
             <div className="carouselBtnDiv">
-              <Link href="/services" className="carouselBtnServices">
+              <Link to="/services" className="carouselBtnServices">
                 Our Services
               </Link>
 
-              <Link href="/contact" className="carouselBtnContact">
+              <Link to="/contact" className="carouselBtnContact">
                 Contact
               </Link>
             </div>
@@ -56,19 +57,28 @@ export default function CarouselComponent() {
             <p className="carousel-subline">
               A Civil & Architects Engineering Consultancy
             </p>
-            <h1 className="carousel-h1">Welcome to NG-group</h1>
+            <h1 className="carousel-h1">WELCOME TO NG</h1>
             <p className="carousel-para">
               Experienced construction company dedicated to delivering
               exceptional results. We specialize in residential and commercial
               construction, renovations, and remodeling. Contact us to bring
               your vision to life.
             </p>
+            <div className="carouselBtnDiv">
+              <Link to="/services" className="carouselBtnServices">
+                Our Services
+              </Link>
+
+              <Link to="/contact" className="carouselBtnContact">
+                Contact
+              </Link>
+            </div>
           </div>
         </div>
         <div>
           <img
             className="carousel-img"
-            src="../carousel3.jpg"
+            src="/carousel3.jpeg"
             alt="Slide 3"
             loading="lazy"
           />
@@ -76,13 +86,22 @@ export default function CarouselComponent() {
             <p className="carousel-subline">
               A Civil & Architects Engineering Consultancy
             </p>
-            <h1 className="carousel-h1">Welcome to NG-group</h1>
+            <h1 className="carousel-h1">Welcome to NG</h1>
             <p className="carousel-para">
               Experienced construction company dedicated to delivering
               exceptional results. We specialize in residential and commercial
               construction, renovations, and remodeling. Contact us to bring
               your vision to life.
             </p>
+            <div className="carouselBtnDiv">
+              <Link to="/services" className="carouselBtnServices">
+                Our Services
+              </Link>
+
+              <Link to="/contact" className="carouselBtnContact">
+                Contact
+              </Link>
+            </div>
           </div>
         </div>
       </Carousel>

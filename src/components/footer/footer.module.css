@@ -109,6 +109,7 @@
 .footerLink {
   transition: all 0.3s ease-in-out;
   flex-shrink: 0;
+  color: rgb(121, 121, 121);
 }
 
 .facebook:active {

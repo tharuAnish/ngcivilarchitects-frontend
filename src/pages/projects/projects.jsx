@@ -5,7 +5,9 @@ import Header from "../../components/pageHeader/header"
 import Tagline from "../../components/tagline/tagline"
 import { useFetch } from "../../hooks/useFetch"
 import s from "./projects.module.css"
-import headerImage from "/carousel3.jpg"
+import headerImage from "/carousel3.jpeg"
+import { MdDateRange } from "react-icons/md"
+import { FaTags } from "react-icons/fa"
 
 export default function Projects() {
   const url = "http://127.0.0.1:8000/api/project/"
@@ -15,8 +17,16 @@ export default function Projects() {
   // Create a new sorted array based on P_rank
   const sortedProjects = [...projects].sort((a, b) => b.p_rank - a.p_rank)
 
-  // Indexing for project flex direction
-  let currentIndex = -1
+  // Function to format the timestamp
+  const formatDate = (timestamp) => {
+    const date = new Date(timestamp)
+    const formattedDate = date.toLocaleDateString("en-US", {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    })
+    return formattedDate
+  }
 
   return (
     <div>
@@ -31,16 +41,9 @@ export default function Projects() {
         {error && <p>{error}</p>}
         {projects &&
           sortedProjects.map((project) => {
-            currentIndex++ // Increment the currentIndex for each iteration
-
             return (
-              <div className={s.projects}>
-                <div
-                  key={project.id}
-                  className={`${s.projectRow} ${
-                    currentIndex % 2 === 0 ? s.projectRow : s.projectRowReverse
-                  }`}
-                >
+              <div className={s.projects} key={project.id}>
+                <div className={s.project}>
                   <div className={s.projectImg}>
                     <img
                       className={s.img}
@@ -49,7 +52,21 @@ export default function Projects() {
                     />
                   </div>
                   <div className={s.projectDetail}>
-                    <p className={s.projectType}>{project.p_type}</p>
+                    <div className={s.subText}>
+                      <div className={s.subTextContainner}>
+                        <MdDateRange />
+                        <p className={s.date}>
+                          {formatDate(project.timestamp)}
+                        </p>{" "}
+                      </div>
+                      <div className={s.subTextContainner}>
+                        {" "}
+                        <FaTags />
+                        <p className={s.tags}>{project.tags}</p>
+                      </div>
+                    </div>
+                    <hr className={s.hr} />
+                    {/* <p className={s.projectType}>{project.p_type}</p> */}
                     <h4 className={s.projectName}>{project.p_name}</h4>
                     <div
                       className={s.projectDesc}

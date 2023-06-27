@@ -1,0 +1,17 @@
+/* Hide the vertical scroll bar */
+.hideScroll {
+  overflow-y: scroll; /* Add a vertical scroll bar */
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: transparent transparent; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  scrollbar-width: none; /* For Internet Explorer and Edge */
+}
+
+.hideScroll::-webkit-scrollbar {
+  width: 0.5em; /* Set the width of the scrollbar */
+  background-color: transparent; /* Set the background color of the scrollbar */
+}
+
+.hideScroll::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Set the color of the scrollbar thumb */
+}

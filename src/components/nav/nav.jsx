@@ -55,6 +55,11 @@ export default function Nav() {
         // <div className={styles.sideMenuBg}>
         <div className={styles.sideMenu}>
           <div onClick={() => setIsMenu(false)}>
+            <Link to="/">
+              <img className={styles.mobilelogo} src={logo} alt="nglogo" />
+            </Link>
+          </div>
+          <div onClick={() => setIsMenu(false)}>
             <NavLink link="/" content="Home" />
           </div>
           <div onClick={() => setIsMenu(false)}>
@@ -70,7 +75,7 @@ export default function Nav() {
             <NavLink link="/blogs" content="Blogs" />
           </div>
 
-          <Link href="/contact" className={styles.contactBtn}>
+          <Link to="/contact" className={styles.contactBtn}>
             Contact
           </Link>
         </div>
