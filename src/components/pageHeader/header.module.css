@@ -1,5 +1,5 @@
 .header {
-  max-height: 47vh;
+  max-height: 50vh;
   overflow: hidden;
   position: relative;
 }
@@ -8,13 +8,17 @@
   width: 100%;
   height: auto;
   object-fit: cover;
-  filter: brightness(0.7);
+  filter: brightness(0.6);
 }
 
 .headerText {
+  text-align: left;
   position: absolute;
-  top: 30%;
-  left: 8%;
+  top: 50%;
+  left: 5rem;
+  right: auto;
+  margin: auto;
+  transform: translateY(-50%);
   color: white;
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.562);
@@ -32,15 +36,14 @@
   opacity: 0.8;
 }
 
-/* @keyframes zoomIn {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.2);
+@media screen and (max-width: 500px) {
+  .headerText {
+    max-width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(-50%);
   }
 }
-
-.zoomIn {
-  animation: zoomIn 10s ease-in-out infinite alternate;
-} */

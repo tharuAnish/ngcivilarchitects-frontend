@@ -1,11 +1,7 @@
 .carousel {
-  min-height: calc(100% - 6.6rem);
-  max-height: 91vh;
+  min-height: calc(100% - 67.19px);
+  max-height: calc(100% - 67.19px);
   position: relative;
-  /* background: linear-gradient(
-    rgba(45, 45, 45, 0.9) 0%,
-    rgba(45, 45, 45, 0) 100%
-  ); */
 }
 
 /* @keyframes zoomIn {
@@ -18,7 +14,7 @@
 } */
 
 .carousel-img {
-  height: 100vh;
+  height: calc(100vh - 67.19px);
   width: auto;
   object-fit: cover;
   filter: brightness(0.6);
@@ -31,18 +27,14 @@
 .carousel-text {
   text-align: left;
   position: absolute;
-  bottom: 35%;
+  top: 50%;
   left: 7%;
   color: white;
   width: 600px;
-  /* border: 5px 0px 0px 0px solid;
-  border-right: 7px solid yellow;
-  padding: 10px 20px;
-  background-color: rgba(0, 0, 0, 0.288); */
+  transform: translateY(-50%);
 }
 
 .carousel-h1 {
-  text-transform: uppercase;
   font-size: 2.5rem;
   font-weight: 500;
   margin: 3px 0 12px;

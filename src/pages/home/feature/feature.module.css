@@ -1,8 +1,7 @@
 .features {
-  padding-bottom: 5rem;
   text-align: center;
   margin-block: auto;
-  margin-top: 4rem;
+  margin-block: 4rem;
 }
 
 .featureTitle {
@@ -35,6 +34,7 @@
 
 @media screen and (max-width: 500px) {
   .featureTitle {
-    font-size: 1.75rem;
+    font-size: 1.8rem;
+    margin-bottom: 7rem;
   }
 }

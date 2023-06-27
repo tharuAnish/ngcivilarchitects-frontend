@@ -46,7 +46,7 @@
 .teamLeft {
   flex-basis: 35%;
   height: 100%;
-  width: auto;
+  max-width: 300px;
   overflow: hidden;
 }
 
@@ -58,6 +58,7 @@
 .staffImg {
   min-height: 300px;
   object-fit: cover;
+
   /* width: 100%; */
 }
 

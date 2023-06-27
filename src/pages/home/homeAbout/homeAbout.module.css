@@ -43,6 +43,7 @@
   text-transform: uppercase;
   font-weight: 500;
   margin-bottom: 1rem;
+  margin-inline: auto;
 }
 .aboutleftH4::after {
   content: "";
@@ -67,6 +68,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-block: 2rem;
 }
 /* Latest Tech Point 1 */
 .point1Svg {
@@ -123,13 +125,17 @@
     width: 100%;
   }
   .aboutleft {
-    height: 25vh;
+    height: 30vh;
+    padding-block: 1rem;
   }
   .point1,
   .point2,
   .point3 {
-    height: calc(75vh - 67.2px);
-    top: calc(67.2px + 25vh);
+    height: calc(70vh - 67.2px);
+    top: calc(67.2px + 30vh);
+  }
+  .aboutleftH4 {
+    font-size: 2rem;
   }
 }
 

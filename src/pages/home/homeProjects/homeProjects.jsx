@@ -24,7 +24,7 @@ export default function HomeProjects() {
         {projects &&
           limitedProjects.map((project) => {
             return (
-              <div key={project.id} className={s.project}>
+              <Link to="/projects" key={project.id} className={s.project}>
                 <div className={s.projectImg}>
                   <img
                     className={s.img}
@@ -37,7 +37,7 @@ export default function HomeProjects() {
                   <h4 className={s.projectName}>{project.p_name}</h4>
                   <p className={s.projectPoint}>{project.p_point1}</p>
                 </div>
-              </div>
+              </Link>
             )
           })}
       </div>

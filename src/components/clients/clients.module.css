@@ -27,11 +27,28 @@
   height: 120px;
   padding: 1rem;
   border: 2px rgb(218, 218, 218) solid;
-  cursor: pointer;
 }
 
 .img {
   height: 100%;
   width: 100%;
   object-fit: contain;
+}
+
+@media screen and (max-width: 500px) {
+  .clientsTitle {
+    text-align: center;
+    margin-block: 2rem 3rem;
+    font-size: 2rem;
+  }
+
+  .clients {
+    gap: 1rem;
+    margin-block: 1rem 3rem;
+  }
+
+  .client {
+    min-width: 300px;
+    max-height: 90px;
+  }
 }

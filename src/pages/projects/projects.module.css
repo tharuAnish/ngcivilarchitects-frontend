@@ -12,30 +12,22 @@
   margin-inline: auto;
 } */
 
-.projectRow {
-  max-width: 80%;
-  display: flex;
-  flex-direction: row;
+.project {
+  max-width: 65%;
   margin-inline: auto;
   gap: 3rem;
   margin-block: 5rem;
-  height: 320px;
+  height: auto;
   background-color: rgb(238, 238, 238);
-  border-radius: 0.8rem;
+  border-radius: 0.5rem;
   overflow: hidden;
-}
-.projectRowReverse {
-  display: flex;
-  flex-direction: row-reverse;
-  max-width: 80%;
-  margin-inline: auto;
-  gap: 3rem;
-  margin-block: 5rem;
-  height: 320px;
+  box-shadow: 2px 5px 22px rgba(0, 0, 0, 0.199);
+  color: var(--color-text-darkgrey);
 }
 
 .projectImg {
-  flex-basis: 40%;
+  height: 450px;
+  overflow: hidden;
 }
 .img {
   height: 100%;
@@ -45,32 +37,88 @@
 
 .projectDetail {
   flex-basis: 60%;
-  margin-block: auto;
   padding-inline: 2rem;
+  margin-block: 1rem 3rem;
+}
+
+.subText {
+  display: flex;
+  gap: 1.5rem;
+  margin-block: 0.2rem;
+}
+
+.subTextContainner {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.hr {
+  width: 100%;
+  height: 0.1rem;
+  margin-block: 0.8rem 1rem;
 }
 
 .projectType {
   font-size: 1.02rem;
-  color: #645f5f;
+
   margin-block: 0.5rem;
   font-weight: 600;
 }
 
 .projectName {
-  font-size: 2.1rem;
+  font-size: 2rem;
   margin-block: 0.5rem;
   color: rgba(27, 27, 27, 0.938);
 }
 
 .projectDesc {
-  font-size: 1.15rem;
-  color: #414141;
-  margin-block: 0.5rem 1.5rem;
+  font-size: 1.05rem;
+  text-align: justify;
+  line-height: 24px;
+  margin-block: 0.5rem 1rem;
 }
 
 .projectPoint {
-  color: #645f5f;
-  margin: 0.3rem 0rem;
+  font-size: 1.05rem;
   list-style-type: circle;
-  font-size: 1.15rem;
+  font-size: 1rem;
+  margin-block: 0.4rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .project {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .project {
+    max-width: 90%;
+  }
+  .projectName {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .project {
+    max-width: 95%;
+  }
+  .projectImg {
+    height: 280px;
+    overflow: hidden;
+  }
+  .projectDetail {
+    padding-inline: 1rem;
+    margin-block: 1rem 2rem;
+  }
+  .projectDesc {
+    font-size: 1rem;
+    line-height: normal;
+  }
+  .subText {
+    gap: 0.5rem;
+    margin-block: 0.2rem;
+    flex-direction: column;
+  }
 }
