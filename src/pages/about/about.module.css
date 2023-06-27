@@ -19,7 +19,7 @@
   width: 100%;
   height: 50vh;
   align-items: center;
-  /* background-color: rgba(137, 43, 226, 0.253); */
+  justify-content: center;
 }
 
 .headerLeft {
@@ -35,6 +35,7 @@
   height: 230px;
   object-fit: cover;
   margin-inline: auto;
+  margin-block: auto;
 }
 
 .h4 {
@@ -44,7 +45,7 @@
 }
 .h4::after {
   content: "";
-  width: 70%;
+  width: 550px;
   height: 0.2rem;
   background-color: rgb(75, 74, 74);
   display: block;
@@ -113,4 +114,79 @@
   margin-left: 1rem;
   list-style-type: circle;
   font-size: 1.03rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .aboutHeader {
+    flex-direction: column;
+    gap: 0rem;
+  }
+  .h4 {
+    font-size: 2.5rem;
+  }
+  .h4::after {
+    width: 430px;
+  }
+  .headerLeft {
+    flex-basis: 60%;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .headerRight {
+    flex-basis: 40%;
+  }
+
+  .company {
+    gap: 0.5rem;
+    flex-direction: row;
+    width: 85%;
+    height: 100%;
+    margin-block: 3rem 5rem;
+    flex-direction: column;
+  }
+  .companyImg {
+    flex-basis: 35%;
+  }
+  .companyImg img {
+    max-height: 400px;
+  }
+
+  .companyDesc {
+    flex-basis: 65%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .logo {
+    height: 170px;
+  }
+  .h4 {
+    font-size: 1.9rem;
+    margin-inline: auto;
+  }
+  .h4::after {
+    width: 330px;
+  }
+  .ngP {
+    letter-spacing: normal;
+    word-spacing: normal;
+    font-size: 1.01rem;
+  }
+  .company {
+    width: 90%;
+  }
+
+  .companyImg img {
+    max-height: 300px;
+  }
+
+  .companyDesc {
+    flex-basis: 65%;
+  }
+  .companyh4 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 2rem;
+  }
 }
