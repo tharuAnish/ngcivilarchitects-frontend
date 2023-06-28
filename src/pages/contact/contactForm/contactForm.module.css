@@ -10,8 +10,7 @@
 
 .leftForm {
   flex-basis: 50%;
-  /* padding: 0.5rem 0 2rem 3.4rem; */
-  padding-inline: 3.4rem 0;
+  padding-left: 2rem;
 }
 
 .nglogo {
@@ -37,16 +36,18 @@
 
 .rightForm {
   flex-basis: 50%;
+  padding-inline: 2rem;
 }
 
 .form {
+  width: 100%;
   background-color: #fff;
   display: block;
   padding: 1rem;
-  max-width: 400px;
+  max-width: 450px;
   border-radius: 0.5rem;
   border: 0.5px solid #e5e7eb;
-  margin-block: 3rem;
+  margin-block: 2rem;
   margin-inline: auto;
 }
 
@@ -116,7 +117,7 @@
 
 .mediaLinks {
   display: flex;
-  gap: 2rem;
+  gap: 1.6rem;
   font-size: 1.1rem;
 }
 
@@ -171,5 +172,56 @@
 
   .youtube:hover {
     color: #ff0000;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  .formContainner {
+    width: 94%;
+    margin-block: 1rem;
+  }
+  .leftForm {
+    padding-inline: 1.3rem 0.5rem;
+  }
+
+  .nglogo {
+    height: 120px;
+  }
+
+  .formH4 {
+    font-size: 1.6rem;
+    margin-block: 1rem 0.5rem;
+  }
+  .rightForm {
+    padding-inline: 1rem;
+  }
+  .mediaLinks {
+    display: flex;
+    gap: 1.1rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .formContainner {
+    flex-direction: column;
+  }
+  .leftForm {
+    padding-inline: 2rem;
+    margin-block: 2rem 0.5rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .formContainner {
+    width: 97%;
+  }
+  .leftForm {
+    padding-inline: 1.4rem;
+    margin-block: 2rem 0.5rem;
+  }
+  .rightForm {
+    padding-inline: 0.7rem;
   }
 }

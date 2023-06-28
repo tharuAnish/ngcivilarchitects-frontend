@@ -189,4 +189,8 @@
     font-weight: 600;
     line-height: 2rem;
   }
+  .highlights {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
 }
