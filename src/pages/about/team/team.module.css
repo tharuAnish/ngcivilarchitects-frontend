@@ -33,7 +33,6 @@
   overflow: hidden;
   align-items: center;
   gap: 2rem;
-  border: 2px solid rgb(236, 233, 233);
   border-radius: 1rem;
   box-shadow: 2px 5px 22px rgba(0, 0, 0, 0.199);
 
@@ -44,14 +43,14 @@
 } */
 
 .teamLeft {
-  flex-basis: 35%;
+  flex-basis: 33%;
   height: 100%;
   max-width: 300px;
   overflow: hidden;
 }
 
 .teamRight {
-  flex-basis: 65%;
+  flex-basis: 67%;
   padding: 1rem 2rem 1rem 0rem;
 }
 
@@ -138,5 +137,45 @@
 
   .youtube:hover {
     color: #ff0000;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .team {
+    width: 85%;
+    margin-inline: auto;
+    margin-block: 4rem;
+    gap: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .team {
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+    margin-inline: auto;
+    margin-block: 4rem;
+    max-height: 100%;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 1rem;
+  }
+
+  .teamLeft {
+    min-width: 100%;
+    max-height: 350px;
+  }
+
+  .staffImg {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .teamRight {
+    flex-basis: 65%;
+    padding: 0rem;
+    margin: 0.8rem 1.2rem 2rem;
   }
 }

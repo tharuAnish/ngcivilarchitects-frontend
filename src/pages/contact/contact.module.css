@@ -30,9 +30,10 @@
 .quickContact {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 4rem;
-  margin-block: 2rem;
+  gap: 2rem 3rem;
+  margin-block: 1rem 4rem;
 }
 
 .quickContainner {
@@ -49,7 +50,7 @@
   min-width: 320px;
   color: var(--color-text-darkgrey);
   border-radius: 7px;
-  margin-block: 0.8rem 3rem;
+  margin-block: 1rem;
 }
 .quickContainner:hover {
   translate: 0 -6px;
@@ -66,7 +67,7 @@
 }
 
 .mapTitle {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: 500;
   margin-block: 2rem;
   text-align: center;
@@ -75,4 +76,29 @@
   height: 450px;
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.39);
+}
+
+@media screen and (max-width: 1200px) {
+  .quickContainner {
+    gap: 1.5rem;
+    padding: 1.5rem 2rem;
+    margin-block: 0.5rem;
+  }
+  .companyName {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .quickContainner {
+    gap: 1.5rem;
+    padding: 1.5rem 2rem;
+    margin-block: 0rem;
+  }
+}
+
+@media screen and (max-width: 355px) {
+  .quickContainner {
+    min-width: 85%;
+  }
 }
