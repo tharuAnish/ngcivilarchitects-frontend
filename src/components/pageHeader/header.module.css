@@ -47,3 +47,9 @@
     transform: translateY(-50%);
   }
 }
+
+@media screen and (min-height: 700px) {
+  .header {
+    max-height: 300px;
+  }
+}

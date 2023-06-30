@@ -4,14 +4,15 @@
 
 .topFooterWrapper {
   background-color: rgb(12, 12, 12);
-  padding-block: 5rem;
+  padding-block: 3rem 2rem;
 }
 
 .topFooter {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
+  flex-direction: row;
 }
 
 .topLeft,
@@ -20,18 +21,11 @@
 }
 
 .topLeft {
-  flex-basis: 40%;
-}
-.topRight {
-  flex-basis: 60%;
+  flex-basis: 35%;
 }
 
-.canwebe {
+.ngLogo {
   font-size: 2.5rem;
-}
-.can {
-  color: var(--color-canwebe-deep);
-  font-weight: 500;
 }
 
 .logo {
@@ -50,14 +44,37 @@
 }
 
 .topRight {
+  flex-basis: 65%;
   display: flex;
-  justify-content: flex-end;
-  gap: 2rem;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+}
+
+.topRight1 {
+  flex-basis: 60%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  gap: 4rem;
+}
+.topRight1:nth-child(1) {
+  flex-basis: 40%;
+}
+.topRight1:nth-child(2) {
+  flex-basis: 60%;
+  max-width: 220px;
+}
+
+.topRight2 {
+  flex-basis: 40%;
 }
 
 .h4 {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
   opacity: 0.8;
 }
 
@@ -73,6 +90,25 @@
   transition: all 0.3s ease-in-out;
 }
 
+.followUs {
+  margin-block: 1rem 1rem;
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.2rem;
+}
+.linkFlex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.4rem;
+  color: #ffffff;
+  opacity: 0.5;
+}
+.icon {
+  font-size: 1.1rem;
+  min-width: 25px;
+}
+
 .bottomFooter {
   /* display: flex;
   justify-content: space-between;*/
@@ -80,25 +116,6 @@
   text-align: center;
   background-color: black;
   color: #4b4b4ba1;
-}
-
-.bottomRight {
-  display: flex;
-  gap: 2rem;
-  font-size: 1.2rem;
-}
-.bottomLeft {
-  font-size: 1rem;
-}
-
-.linkFlex {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 0.4rem;
-}
-.icon {
-  font-size: 1.1rem;
 }
 
 .facebook,
@@ -164,46 +181,126 @@
   }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1030px) {
   .topFooter {
+    gap: 1rem;
+    flex-direction: column;
+    text-align: center;
+  }
+  .topLeft {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .logo {
+    margin-inline: auto;
+  }
+  .topRight {
+    width: 92%;
+    display: flex;
+    align-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 2rem;
+  }
+
+  .topRight1 {
+    flex-basis: 55%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-around;
     gap: 3rem;
   }
-  .topFooterWrapper {
-    padding-block: 3rem 5rem;
+  .topRight1:nth-child(1) {
+    flex-basis: 35%;
   }
-  .topLeft,
-  .topRight {
-    flex-basis: 100%;
-  }
-
-  .topRight {
-    justify-content: flex-start;
-    gap: 5rem;
-    flex-wrap: wrap;
-  }
-  .topPara {
-    max-width: 100%;
-    margin-top: 0;
-  }
-  .h4 {
-    margin-bottom: 0.8rem;
+  .topRight1:nth-child(2) {
+    flex-basis: 55%;
   }
 
-  .bottomFooter {
-    padding: 2rem 1rem;
+  .topRight2 {
+    flex-basis: 45%;
   }
 }
 
-@media screen and (max-width: 520px) {
-  .bottomFooter {
-    padding: 2rem 1rem;
-    flex-wrap: wrap;
-    flex-direction: column-reverse;
-    align-items: center;
-    gap: 1.3rem;
+@media screen and (max-width: 650px) {
+  .topRight {
+    width: 92%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 2rem;
   }
 
-  .h4 {
-    margin-bottom: 0.3rem;
+  .topRight1 {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+  .topRight1:nth-child(1) {
+    flex-basis: 60%;
+  }
+  .topRight1:nth-child(2) {
+    flex-basis: 60%;
+  }
+
+  .topRight2 {
+    flex-basis: 50%;
+  }
+
+  .followUs {
+    margin-left: 2rem;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .topRight {
+    width: 100%;
+    display: flex;
+    align-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 2rem;
+  }
+  .topRight1 {
+    max-width: 92%;
+    padding-inline: 0.5rem;
+    gap: 2rem;
+    margin-inline: auto;
+  }
+  .topRight1:nth-child(1) {
+    flex-basis: 40%;
+  }
+  .topRight1:nth-child(2) {
+    flex-basis: 60%;
+  }
+  .topRight2 {
+    max-width: 92%;
+    margin-inline: auto;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .topRight1 {
+    max-width: 92%;
+    padding-inline: 0.5rem;
+    gap: 1.2rem;
+    margin-inline: auto;
+  }
+  .topRight1:nth-child(1) {
+    flex-basis: 35%;
+  }
+  .topRight1:nth-child(2) {
+    flex-basis: 65%;
+    max-width: 180px;
+  }
+  .topRight2 {
+    max-width: 92%;
+    margin-inline: auto;
   }
 }
