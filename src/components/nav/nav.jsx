@@ -2,7 +2,7 @@ import styles from "./nav.module.css"
 import { Link } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { MdMenu, MdClose } from "react-icons/md"
-import logo from "../../assets/ngLogoBuildingWhite.png"
+import logo from "../../assets/ngLogoNoBg.png"
 import NavLink from "../navlink/navlink"
 
 export default function Nav() {

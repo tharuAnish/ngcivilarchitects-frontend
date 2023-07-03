@@ -48,7 +48,7 @@ export default function ContactForm() {
     <div className="wrapper">
       <div className={s.formContainner}>
         <div className={s.leftForm}>
-          <img className={s.nglogo} src={ngLogo} alt="NGLogo" />
+          <img className={s.nglogo} src={ngLogo} alt="NGLogo" loading="lazy" />
           <h4 className={s.formH4}>Welcome to our Contact Form!</h4>
           <p className={s.formPara}>
             We're thrilled that you're considering our construction company for

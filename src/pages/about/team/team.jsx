@@ -26,6 +26,7 @@ export default function Team() {
                 className={s.staffImg}
                 src={`http://localhost:8000${team.staff_pic}`}
                 alt="staff img"
+                loading="lazy"
               />
             </div>
             <div className={s.teamRight}>

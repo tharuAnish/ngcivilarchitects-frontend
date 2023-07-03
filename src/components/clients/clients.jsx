@@ -10,19 +10,19 @@ export default function Clients() {
       <h2 className={s.clientsTitle}>Our Clients</h2>
       <div className={s.clients}>
         <div className={s.client}>
-          <img className={s.img} src={img1} alt="client image" />
+          <img className={s.img} src={img1} alt="client image" loading="lazy" />
         </div>
 
         <div className={s.client}>
-          <img className={s.img} src={img2} alt="client image" />
+          <img className={s.img} src={img2} alt="client image" loading="lazy" />
         </div>
 
         <div className={s.client}>
-          <img className={s.img} src={img3} alt="client image" />
+          <img className={s.img} src={img3} alt="client image" loading="lazy" />
         </div>
 
         <div className={s.client}>
-          <img className={s.img} src={img4} alt="client image" />
+          <img className={s.img} src={img4} alt="client image" loading="lazy" />
         </div>
       </div>
     </div>

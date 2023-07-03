@@ -25,7 +25,7 @@ export default function About() {
       <div className="wrapper">
         <div className={s.company}>
           <div className={s.companyImg}>
-            <img src={companyImg} alt="company image" />
+            <img src={companyImg} alt="company image" loading="lazy" />
           </div>
           <div className={s.companyDesc}>
             <h4 className={s.companyh4}>
