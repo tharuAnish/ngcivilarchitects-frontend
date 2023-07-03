@@ -123,6 +123,7 @@
 
 .mobilelogo {
   height: 150px;
+  filter: invert(1);
 }
 
 @media screen and (max-width: 885px) {

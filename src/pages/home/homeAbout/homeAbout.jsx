@@ -9,7 +9,12 @@ export default function HomeAbout() {
     <section className={styles.about}>
       <div className={styles.aboutleft}>
         <h4 className={styles.aboutleftH4}>About Us</h4>
-        <img className={styles.aboutImg} src={ngLogo} alt="NG-logo" />
+        <img
+          loading="lazy"
+          className={styles.aboutImg}
+          src={ngLogo}
+          alt="NG-logo"
+        />
         <p className={styles.aboutleftsubp}>
           We are the best construction company
         </p>
@@ -17,7 +22,12 @@ export default function HomeAbout() {
       <div className={styles.aboutright}>
         <div className={styles.point1}>
           {/* <div className={styles.point1Svg}><about1 /></div> */}
-          <img className={styles.point1Svg} src={about1} alt="about image" />
+          <img
+            loading="lazy"
+            className={styles.point1Svg}
+            src={about1}
+            alt="about image"
+          />
 
           <p className={styles.point1P}>
             We are a dynamic team of consulting engineers offering comprehensive
@@ -29,7 +39,12 @@ export default function HomeAbout() {
         </div>
         <div className={styles.point1}>
           <h4 className={styles.point1H4}>Building Dreams</h4>
-          <img className={styles.point2Svg} src={about2} alt="about image" />
+          <img
+            loading="lazy"
+            className={styles.point2Svg}
+            src={about2}
+            alt="about image"
+          />
           <p className={styles.point1P}>
             We are a construction company dedicated to turning your vision into
             reality. With our expertise, we bring your dream projects to life,
@@ -38,7 +53,12 @@ export default function HomeAbout() {
         </div>
         <div className={styles.point3}>
           <h4 className={styles.point1H4}>Excellence in Construction</h4>
-          <img className={styles.point3Svg} src={about3} alt="about image" />
+          <img
+            loading="lazy"
+            className={styles.point3Svg}
+            src={about3}
+            alt="about image"
+          />
           <p className={styles.point1P}>
             At our core, we are driven by a passion for excellence. From concept
             to completion, we consistently deliver top-quality construction

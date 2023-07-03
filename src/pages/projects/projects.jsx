@@ -5,7 +5,7 @@ import Header from "../../components/pageHeader/header"
 import Tagline from "../../components/tagline/tagline"
 import { useFetch } from "../../hooks/useFetch"
 import s from "./projects.module.css"
-import headerImage from "/carousel3.jpeg"
+import headerImage from "/carousel3.webp"
 import { MdDateRange } from "react-icons/md"
 import { FaTags } from "react-icons/fa"
 
@@ -37,6 +37,16 @@ export default function Projects() {
         headerP={"Building Excellence, Inspiring Futures"}
       />
       <div className={`${s.projectWrapper} wrapper`}>
+        <div className={s.heading}>
+          <p className={s.titleP}>OUR PROJECTS</p>
+          <h2 className={s.titleH2}>Showcasing Our Success</h2>
+          <p className={s.servicePara}>
+            NG-Group: Building Dreams, Creating Marvels From residential to
+            commercial projects, our skilled professionals handle every detail.
+            Exceptional results, client satisfaction, and architectural marvels
+            are our priorities.
+          </p>
+        </div>
         {isPending && <Loading />}
         {error && <p>{error}</p>}
         {projects &&
@@ -49,6 +59,7 @@ export default function Projects() {
                       className={s.img}
                       src={`http://localhost:8000${project.p_pic}`}
                       alt="project img"
+                      loading="lazy"
                     />
                   </div>
                   <div className={s.projectDetail}>

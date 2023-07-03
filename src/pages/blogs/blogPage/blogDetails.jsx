@@ -54,6 +54,7 @@ export default function BlogDetails() {
             className={s.img}
             src={`http://localhost:8000${blog.b_pic}`}
             alt="blog img"
+            loading="lazy"
           />
           <div
             className={s.desc}

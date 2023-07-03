@@ -53,6 +53,7 @@ export default function Blogs() {
                 className={s.img}
                 src={`http://localhost:8000${blog.b_pic}`}
                 alt="blog img"
+                loading="lazy"
               />
               <div className={s.blogText}>
                 <div className={s.subText}>

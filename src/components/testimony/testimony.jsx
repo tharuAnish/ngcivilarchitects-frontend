@@ -59,6 +59,7 @@ export default function Testimony() {
                       className={s.clientImg}
                       src={`http://localhost:8000${testimonial.client_pic}`}
                       alt="client img"
+                      loading="lazy"
                     />
                   </div>
 

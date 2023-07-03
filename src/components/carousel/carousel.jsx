@@ -16,19 +16,20 @@ export default function CarouselComponent() {
         transitionTime={1000}
         useKeyboardArrows
         swipeable={false} // Disable default swipe gesture handling
+        showStatus={false}
       >
         <div>
           <img
             className="carousel-img zoomIn"
             src="carousel1.webp"
-            alt="Slide 1"
+            alt="Slide 1 - A Civil & Architectural Engineering Consultancy"
             loading="lazy"
           />
           <div className="carousel-text">
             <p className="carousel-subline">
               A Civil & Architectural Engineering Consultancy
             </p>
-            <h1 className="carousel-h1">WELCOME TO NG</h1>
+            <h2 className="carousel-h1">WELCOME TO NG</h2>
             <p className="carousel-para">
               Experienced construction company dedicated to delivering
               exceptional results. We specialize in residential and commercial
@@ -49,15 +50,15 @@ export default function CarouselComponent() {
         <div>
           <img
             className="carousel-img "
-            src="../carousel2.jpg"
-            alt="Slide 2"
+            src="../carousel2.webp"
+            alt="Slide 2 - A Civil & Architectural Engineering Consultancy"
             loading="lazy"
           />
           <div className="carousel-text">
             <p className="carousel-subline">
               A Civil & Architects Engineering Consultancy
             </p>
-            <h1 className="carousel-h1">WELCOME TO NG</h1>
+            <h2 className="carousel-h1">WELCOME TO NG</h2>
             <p className="carousel-para">
               Experienced construction company dedicated to delivering
               exceptional results. We specialize in residential and commercial
@@ -78,15 +79,15 @@ export default function CarouselComponent() {
         <div>
           <img
             className="carousel-img"
-            src="/carousel3.jpeg"
-            alt="Slide 3"
+            src="/carousel3.webp"
+            alt="Slide 3 - A Civil & Architectural Engineering Consultancy"
             loading="lazy"
           />
           <div className="carousel-text">
             <p className="carousel-subline">
               A Civil & Architects Engineering Consultancy
             </p>
-            <h1 className="carousel-h1">Welcome to NG</h1>
+            <h2 className="carousel-h1">WELCOME TO NG</h2>
             <p className="carousel-para">
               Experienced construction company dedicated to delivering
               exceptional results. We specialize in residential and commercial
