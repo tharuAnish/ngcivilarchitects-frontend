@@ -11,7 +11,6 @@ export default function Testimony() {
   const { data: apiResponse, isPending, error } = useFetch(url)
   const testimonials = apiResponse?.testimonials || []
 
-  // to show and hide arrow above 700px
   const [showArrows, setShowArrows] = useState(false)
 
   useEffect(() => {
@@ -20,13 +19,9 @@ export default function Testimony() {
       setShowArrows(windowWidth > 700)
     }
 
-    // Add event listener for window resize
     window.addEventListener("resize", handleResize)
-
-    // Initial check for window width
     handleResize()
 
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize)
     }
@@ -34,48 +29,43 @@ export default function Testimony() {
 
   return (
     <div className={s.testimonials}>
-      <div>
-        <div className={s.testimonialsWrapper}>
-          <h4 className={s.h4}>Testimonials</h4>
-
-          {isPending && <Loading />}
-          {error && <p>{error}</p>}
-          <Carousel
-            infiniteLoop
-            autoPlay
-            interval={20000}
-            transitionTime={1000}
-            showArrows={showArrows} // Dynamically set the showArrows prop based on window width
-            showStatus={false}
-            showThumbs={false}
-            showIndicators={false}
-            swipeable={false} // Disable default swipe gesture handling
-          >
-            {testimonials &&
-              testimonials.map((testimonial) => (
-                <div key={testimonial.id}>
-                  <div className={s.imgDiv}>
-                    <img
-                      className={s.clientImg}
-                      src={`http://localhost:8000${testimonial.client_pic}`}
-                      alt="client img"
-                      loading="lazy"
-                    />
-                  </div>
-
-                  <div
-                    className={s.clientDesc}
-                    dangerouslySetInnerHTML={{
-                      __html: testimonial.client_desc,
-                    }}
-                  ></div>
-                  <RiDoubleQuotesL className={s.doubleQuote} />
-                  <h4 className={s.clientName}>- {testimonial.client_name}</h4>
-                  <p className={s.clientPos}>{testimonial.client_pos}</p>
+      <div className={s.backgroundContainer}></div>
+      <div className={s.testimonialsWrapper}>
+        <h4 className={s.h4}>Testimonials</h4>
+        {isPending && <Loading />}
+        {error && <p>{error}</p>}
+        <Carousel
+          infiniteLoop
+          autoPlay
+          interval={20000}
+          transitionTime={1000}
+          showArrows={showArrows}
+          showStatus={false}
+          showThumbs={false}
+          showIndicators={false}
+          swipeable={false}
+        >
+          {testimonials &&
+            testimonials.map((testimonial) => (
+              <div key={testimonial.id}>
+                <div className={s.imgDiv}>
+                  <img
+                    className={s.clientImg}
+                    src={`http://localhost:8000${testimonial.client_pic}`}
+                    alt="client img"
+                    loading="lazy"
+                  />
                 </div>
-              ))}
-          </Carousel>
-        </div>
+                <div
+                  className={s.clientDesc}
+                  dangerouslySetInnerHTML={{ __html: testimonial.client_desc }}
+                ></div>
+                <RiDoubleQuotesL className={s.doubleQuote} />
+                <h4 className={s.clientName}>- {testimonial.client_name}</h4>
+                <p className={s.clientPos}>{testimonial.client_pos}</p>
+              </div>
+            ))}
+        </Carousel>
       </div>
     </div>
   )
