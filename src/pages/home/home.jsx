@@ -6,6 +6,7 @@ import HomeAbout from "./homeAbout/homeAbout"
 import Testimony from "../../components/testimony/testimony"
 import HomeProjects from "./homeProjects/homeProjects"
 import Clients from "../../components/clients/clients"
+import ChatSupport from "../../components/chatSupport/chatSupport"
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <HomeProjects />
       <Clients />
       <Testimony />
+      <ChatSupport />
       <Footer />
     </div>
   )
