@@ -9,7 +9,7 @@
 }
 
 .backgroundContainer {
-  background-image: url("testimonial_bg.webp");
+  background-image: url("./testimonialbg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
