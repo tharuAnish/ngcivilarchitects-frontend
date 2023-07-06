@@ -1,5 +1,6 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import "./chatSupport.css"
+import { FiUser } from "react-icons/fi"
 
 const handleUserResponse = (userText, handleBotMessage) => {
   // Convert userText to lowercase for case-insensitive matching
@@ -17,18 +18,18 @@ const handleUserResponse = (userText, handleBotMessage) => {
   ) {
     handleBotMessage({
       author: "bot",
-      text: `Absolutely! We are a construction company specializing in [mention your areas of expertise, e.g., residential construction, commercial projects, renovations]. Our team of experienced professionals is dedicated to delivering high-quality results and exceeding our clients' expectations.`,
+      text: `We are a construction company dedicated to turning your vision into reality. With our expertise, we bring your dream projects to life, creating spaces that inspire and delight.`,
     })
   } else if (lowercaseUserText.includes("contact")) {
     handleBotMessage({
       author: "bot",
       text: `You can reach us through the following contact details:
-        Phone: [Your company's phone number]
-        Email: [Your company's email address]
-        Office address: [Your company's physical address]
+        Phone: [phone number]
+        Email: [email address]
+        Office address: [company physical address]
         Feel free to contact us for any inquiries or to discuss your construction needs.`,
     })
-  } else if (lowercaseUserText.includes("ongoing projects")) {
+  } else if (lowercaseUserText.includes("projects")) {
     handleBotMessage({
       author: "bot",
       text: `Yes, we have several ongoing projects that showcase our expertise. You can find more information about our projects on our website's portfolio page. Would you like me to provide a direct link?`,
@@ -67,7 +68,12 @@ const ChatCircle = ({ onClick }) => {
 }
 
 const ChatWindow = ({ onClose }) => {
-  const [messages, setMessages] = useState([])
+  const [messages, setMessages] = useState([
+    {
+      author: "bot",
+      text: "Hello! How can I assist you today?",
+    },
+  ])
 
   const handleBotMessage = (message) => {
     setMessages((prevMessages) => [...prevMessages, message])
@@ -94,7 +100,7 @@ const ChatWindow = ({ onClose }) => {
   return (
     <div className="chat-window">
       <div className="chat-header">
-        <h2>Chat</h2>
+        <h2 className="h2">NG-Chat Support</h2>
         <button className="close-button" onClick={onClose}>
           X
         </button>
@@ -105,13 +111,41 @@ const ChatWindow = ({ onClose }) => {
             key={index}
             className={`message ${message.author === "bot" ? "bot" : "user"}`}
           >
-            {message.text}
+            <div className="avatar-msg">
+              <div className="avatar-container">
+                {message.author === "bot" && (
+                  <img
+                    src="./ngLogoWhiteBg.jpg"
+                    alt="Bot Avatar"
+                    className="avatar botAvatar"
+                  />
+                )}
+                {message.author === "user" && (
+                  <FiUser alt="User Avatar" className="avatar userAvatar" />
+                )}
+              </div>
+
+              <div
+                className={`message-text ${
+                  message.author === "bot" ? "bot-text" : "user-text"
+                }`}
+              >
+                {message.text}
+              </div>
+            </div>
           </div>
         ))}
       </div>
-      <form onSubmit={handleSubmit}>
-        <input type="text" name="userMessage" placeholder="Type your message" />
-        <button type="submit">Send</button>
+      <form onSubmit={handleSubmit} className="chatForm">
+        <input
+          className="chatInput"
+          type="text"
+          name="userMessage"
+          placeholder="Type your message"
+        />
+        <button className="chatBtn" type="submit">
+          Send
+        </button>
       </form>
     </div>
   )
