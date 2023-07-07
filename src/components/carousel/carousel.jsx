@@ -12,7 +12,7 @@ export default function CarouselComponent() {
         showThumbs={false}
         autoPlay
         infiniteLoop
-        interval={5000}
+        interval={7000}
         transitionTime={1000}
         useKeyboardArrows
         swipeable={false} // Disable default swipe gesture handling
