@@ -1,40 +1,54 @@
 import React, { useState, useEffect, useRef } from "react"
 import "./chatSupport.css"
 import { FiUser } from "react-icons/fi"
+import { Link } from "react-router-dom"
 
 const handleUserResponse = (userText, handleBotMessage) => {
   // Convert userText to lowercase for case-insensitive matching
   const lowercaseUserText = userText.toLowerCase()
 
   // Check for keyword matches in user's input
-  if (lowercaseUserText.includes("hi") || lowercaseUserText.includes("hello")) {
+  if (
+    lowercaseUserText.includes("hi") ||
+    lowercaseUserText.includes("hello") ||
+    lowercaseUserText.includes("namaste")
+  ) {
     handleBotMessage({
       author: "bot",
       text: (
         <>
-          Hello! Welcome to the NG-CivilArchitects chat support. How can I
-          assist you today? You can ask me questions like:
+          Hi, Hello, Namaste... <br />
+          Welcome to the NG-CivilArchitects ChatSupport. How can I assist you
+          today? You can ask me questions like:
           <br />
-          1. Tell me about your company?
-          <br />
-          2. How can I contact?
-          <br />
-          3. What are your ongoing projects?
-          <br />
-          4. What are the services I can get?
-          <br />
-          5. Tell me about yourself?
-          <br />
+          <li>Tell me about the company.</li>
+          <li>Give me contact details.</li>
+          <li>Tell me about projects.</li>
+          <li>What are the services I can get?</li>
+          <li>Tell me about yourself.</li>
         </>
       ),
     })
-  } else if (
-    lowercaseUserText.includes("company") ||
-    lowercaseUserText.includes("detail")
-  ) {
+  } else if (lowercaseUserText.includes("company")) {
     handleBotMessage({
       author: "bot",
-      text: `We are a construction company dedicated to turning your vision into reality. With our expertise, we bring your dream projects to life, creating spaces that inspire and delight.`,
+      text: (
+        <>
+          We are a construction company dedicated to turning your vision into
+          reality. With our expertise, we bring your dream projects to life,
+          creating spaces that inspire and delight.You can learn more about us
+          on our{" "}
+          <Link
+            className="botLink"
+            to="/about"
+            target="blank"
+            rel="noopener noreferrer"
+          >
+            About page
+          </Link>{" "}
+          .
+        </>
+      ),
     })
   } else if (
     lowercaseUserText.includes("company contact") ||
@@ -47,24 +61,73 @@ const handleUserResponse = (userText, handleBotMessage) => {
           You can reach us through the following contact details: <br />
           <strong>Phone:</strong> +977 081-538195
           <br />
-          <strong>Email:</strong> ngcivilarchitects@gmail.com <br />
-          <strong>Office address</strong>: Ratna Rajmarg (Nepalganj-Surkhet
-          Road-10)
+          <strong>Email: </strong>
+          <Link
+            className="botLink"
+            to="https://mail.google.com/mail/?view=cm&fs=1&to=ngcivilarchitectures@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ngcivilarchitects@gmail.com
+          </Link>
           <br />
-          Feel free to contact us for any inquiries or to discuss your
-          construction needs.
+          <strong>Office address: </strong>
+          <Link
+            className="botLink"
+            to="https://goo.gl/maps/Qoub1dkW1AMmFb83A"
+            target="blank"
+            rel="noopener noreferrer"
+          >
+            Ratna Rajmarg (Nepalganj-Surkhet Road-10)
+          </Link>
+          <br />
+          Feel free to contact us from our{" "}
+          <Link
+            className="botLink"
+            to="/contact"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Contact Page
+          </Link>{" "}
+          for any inquiries or to discuss your construction needs.
         </>
       ),
     })
-  } else if (lowercaseUserText.includes("projects")) {
+  } else if (lowercaseUserText.includes("project")) {
     handleBotMessage({
       author: "bot",
-      text: `Yes, we have several ongoing projects that showcase our expertise. You can find more information about our projects on our website's portfolio page. Would you like me to provide a direct link?`,
+      text: (
+        <>
+          Yes, we have several ongoing projects that showcase our expertise. You
+          can find more information about our projects on our website's{" "}
+          <Link
+            className="botLink"
+            to="/projects"
+            target="blank"
+            rel="noopener noreferrer"
+          >
+            Project page.
+          </Link>{" "}
+          Would you like me to provide a direct link?
+        </>
+      ),
     })
   } else if (lowercaseUserText.includes("yes")) {
     handleBotMessage({
       author: "bot",
-      text: `Sure! Here is the link to our portfolio page: [Provide the direct link to your portfolio page]. Feel free to explore our completed and ongoing projects to get a better sense of our work.`,
+      text: (
+        <>
+          <Link
+            className="botLink"
+            to="/projects"
+            target="blank"
+            rel="noopener noreferrer"
+          >
+            https://ngcivilarchitects.com/projects
+          </Link>
+        </>
+      ),
     })
   } else if (lowercaseUserText.includes("no")) {
     handleBotMessage({
@@ -79,12 +142,47 @@ const handleUserResponse = (userText, handleBotMessage) => {
   } else if (lowercaseUserText.includes("yourself")) {
     handleBotMessage({
       author: "bot",
-      text: `I'm an AI chat support created by Anish Tharu to provide information about NGCivil Architects. They are a renowned architectural firm known for innovative designs, sustainability, and client satisfaction. I'm here to assist with any questions about their projects and services. Let's explore NGCivil Architects together!`,
+      text: (
+        <>
+          I'm an AI ChatSupport created by{" "}
+          <Link
+            className="botLink"
+            to="https://www.linkedin.com/in/tharuanish/"
+            target="blank"
+            rel="noopener noreferrer"
+          >
+            Anish Tharu
+          </Link>{" "}
+          to provide information about NG-CivilArchitects. They are a renowned
+          architectural firm known for innovative designs, sustainability, and
+          client satisfaction. I'm here to assist with any questions about their
+          projects and services. Let's explore NG-CivilArchitects together!
+        </>
+      ),
     })
-  } else if (lowercaseUserText.includes("services")) {
+  } else if (lowercaseUserText.includes("service")) {
     handleBotMessage({
       author: "bot",
-      text: `I'm an AI chat support created by Anish Tharu to provide information about NGCivil Architects. They are a renowned architectural firm known for innovative designs, sustainability, and client satisfaction. I'm here to assist with any questions about their projects and services. Let's explore NGCivil Architects together!`,
+      text: (
+        <>
+          At NG-Group, we take pride in providing an extensive range of
+          construction services with skilled professionals and tailored
+          solutions. Our services include:
+          <br />
+          <li>Estimate and BOQ Preperations</li>
+          <li>Design and Engineering</li>
+          <li>Property Valuations</li>
+          <li>Construction Management</li>
+          <Link
+            className="botLink"
+            to="/services"
+            target="blank"
+            rel="noopener noreferrer"
+          >
+            and many more...
+          </Link>
+        </>
+      ),
     })
   } else {
     handleBotMessage({
@@ -92,18 +190,13 @@ const handleUserResponse = (userText, handleBotMessage) => {
       text: (
         <>
           I'm sorry, I didn't understand. Can you please rephrase your question
-          or choose from the provided options?
+          or choose from the provided options:
           <br />
-          1. Tell me about your company?
-          <br />
-          2. How can I contact?
-          <br />
-          3. What are your ongoing projects?
-          <br />
-          4. What are the services I can get?
-          <br />
-          5. Tell me about yourself?
-          <br />
+          <li>Tell me about the company.</li>
+          <li>Give me contact details.</li>
+          <li>Tell me about projects.</li>
+          <li>What are the services I can get?</li>
+          <li>Tell me about yourself.</li>
         </>
       ),
     })
@@ -126,19 +219,15 @@ const ChatWindow = ({ onClose }) => {
       author: "bot",
       text: (
         <>
-          Hello! Welcome to the NG-CivilArchitects chat support. How can I
-          assist you today? You can ask me questions like:
+          Hi, Hello, Namaste... <br />
+          Welcome to the NG-CivilArchitects ChatSupport. How can I assist you
+          today? You can ask me questions like:
           <br />
-          1. Tell me about your company?
-          <br />
-          2. How can I contact?
-          <br />
-          3. What are your ongoing projects?
-          <br />
-          4. What are the services I can get?
-          <br />
-          5. Tell me about yourself?
-          <br />
+          <li>Tell me about the company.</li>
+          <li>Give me contact details.</li>
+          <li>Tell me about projects.</li>
+          <li>What are the services I can get?</li>
+          <li>Tell me about yourself.</li>
         </>
       ),
     },
