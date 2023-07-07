@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import "./chatSupport.css"
 import { FiUser } from "react-icons/fi"
 
@@ -10,7 +10,23 @@ const handleUserResponse = (userText, handleBotMessage) => {
   if (lowercaseUserText.includes("hi") || lowercaseUserText.includes("hello")) {
     handleBotMessage({
       author: "bot",
-      text: "Hello! How can I assist you today?",
+      text: (
+        <>
+          Hello! Welcome to the NG-CivilArchitects chat support. How can I
+          assist you today? You can ask me questions like:
+          <br />
+          1. Tell me about your company?
+          <br />
+          2. How can I contact?
+          <br />
+          3. What are your ongoing projects?
+          <br />
+          4. What are the services I can get?
+          <br />
+          5. Tell me about yourself?
+          <br />
+        </>
+      ),
     })
   } else if (
     lowercaseUserText.includes("company") ||
@@ -20,14 +36,25 @@ const handleUserResponse = (userText, handleBotMessage) => {
       author: "bot",
       text: `We are a construction company dedicated to turning your vision into reality. With our expertise, we bring your dream projects to life, creating spaces that inspire and delight.`,
     })
-  } else if (lowercaseUserText.includes("contact")) {
+  } else if (
+    lowercaseUserText.includes("company contact") ||
+    lowercaseUserText.includes("contact")
+  ) {
     handleBotMessage({
       author: "bot",
-      text: `You can reach us through the following contact details:
-        Phone: [phone number]
-        Email: [email address]
-        Office address: [company physical address]
-        Feel free to contact us for any inquiries or to discuss your construction needs.`,
+      text: (
+        <>
+          You can reach us through the following contact details: <br />
+          <strong>Phone:</strong> +977 081-538195
+          <br />
+          <strong>Email:</strong> ngcivilarchitects@gmail.com <br />
+          <strong>Office address</strong>: Ratna Rajmarg (Nepalganj-Surkhet
+          Road-10)
+          <br />
+          Feel free to contact us for any inquiries or to discuss your
+          construction needs.
+        </>
+      ),
     })
   } else if (lowercaseUserText.includes("projects")) {
     handleBotMessage({
@@ -49,10 +76,36 @@ const handleUserResponse = (userText, handleBotMessage) => {
       author: "bot",
       text: `You're welcome! If you have any more questions in the future, don't hesitate to reach out. Have a great day!`,
     })
+  } else if (lowercaseUserText.includes("yourself")) {
+    handleBotMessage({
+      author: "bot",
+      text: `I'm an AI chat support created by Anish Tharu to provide information about NGCivil Architects. They are a renowned architectural firm known for innovative designs, sustainability, and client satisfaction. I'm here to assist with any questions about their projects and services. Let's explore NGCivil Architects together!`,
+    })
+  } else if (lowercaseUserText.includes("services")) {
+    handleBotMessage({
+      author: "bot",
+      text: `I'm an AI chat support created by Anish Tharu to provide information about NGCivil Architects. They are a renowned architectural firm known for innovative designs, sustainability, and client satisfaction. I'm here to assist with any questions about their projects and services. Let's explore NGCivil Architects together!`,
+    })
   } else {
     handleBotMessage({
       author: "bot",
-      text: `I'm sorry, I didn't understand. Can you please rephrase your question or choose from the provided options?`,
+      text: (
+        <>
+          I'm sorry, I didn't understand. Can you please rephrase your question
+          or choose from the provided options?
+          <br />
+          1. Tell me about your company?
+          <br />
+          2. How can I contact?
+          <br />
+          3. What are your ongoing projects?
+          <br />
+          4. What are the services I can get?
+          <br />
+          5. Tell me about yourself?
+          <br />
+        </>
+      ),
     })
   }
 }
@@ -71,13 +124,37 @@ const ChatWindow = ({ onClose }) => {
   const [messages, setMessages] = useState([
     {
       author: "bot",
-      text: "Hello! How can I assist you today?",
+      text: (
+        <>
+          Hello! Welcome to the NG-CivilArchitects chat support. How can I
+          assist you today? You can ask me questions like:
+          <br />
+          1. Tell me about your company?
+          <br />
+          2. How can I contact?
+          <br />
+          3. What are your ongoing projects?
+          <br />
+          4. What are the services I can get?
+          <br />
+          5. Tell me about yourself?
+          <br />
+        </>
+      ),
     },
   ])
+
+  const messageContainerRef = useRef(null)
 
   const handleBotMessage = (message) => {
     setMessages((prevMessages) => [...prevMessages, message])
   }
+
+  useEffect(() => {
+    // Scroll to the latest message
+    messageContainerRef.current.scrollTop =
+      messageContainerRef.current.scrollHeight
+  }, [messages])
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -105,7 +182,7 @@ const ChatWindow = ({ onClose }) => {
           X
         </button>
       </div>
-      <div className="chat-container">
+      <div className="chat-container" ref={messageContainerRef}>
         {messages.map((message, index) => (
           <div
             key={index}
@@ -124,7 +201,6 @@ const ChatWindow = ({ onClose }) => {
                   <FiUser alt="User Avatar" className="avatar userAvatar" />
                 )}
               </div>
-
               <div
                 className={`message-text ${
                   message.author === "bot" ? "bot-text" : "user-text"
@@ -142,6 +218,7 @@ const ChatWindow = ({ onClose }) => {
           type="text"
           name="userMessage"
           placeholder="Type your message"
+          required
         />
         <button className="chatBtn" type="submit">
           Send
@@ -161,6 +238,14 @@ export default function ChatSupport() {
   const handleCloseChat = () => {
     setIsChatOpen(false)
   }
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsChatOpen(true)
+    }, 8000)
+
+    return () => clearTimeout(timer)
+  }, [])
 
   return (
     <div className="App">
