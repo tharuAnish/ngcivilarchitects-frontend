@@ -7,6 +7,7 @@ import { useFetch } from "../../hooks/useFetch"
 import Footer from "../../components/footer/footer"
 import Tagline from "../../components/tagline/tagline"
 import Loading from "../../components/loading/loading"
+import ChatSupport from "../../components/chatSupport/chatSupport"
 
 export default function Services() {
   const url = "http://127.0.0.1:8000/api/services/"
@@ -58,6 +59,7 @@ export default function Services() {
               ))}
         </div>
       </div>
+      <ChatSupport />
       <Testimony />
       <Tagline
         tagH4="We Provide Best Construction Services"

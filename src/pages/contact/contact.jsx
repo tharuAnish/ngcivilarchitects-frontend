@@ -8,6 +8,7 @@ import { LuPhoneCall } from "react-icons/lu"
 import { AiOutlineMail } from "react-icons/ai"
 import { MdLocationPin } from "react-icons/md"
 import { Link } from "react-router-dom"
+import ChatSupport from "../../components/chatSupport/chatSupport"
 
 export default function Contact() {
   return (
@@ -73,7 +74,7 @@ export default function Contact() {
           referrerPolicy="no-referrer-when-downgrade"
         />
       </div>
-
+      <ChatSupport />
       <Footer />
     </>
   )

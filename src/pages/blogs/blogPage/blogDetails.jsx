@@ -7,6 +7,7 @@ import Header from "../../../components/pageHeader/header"
 import headerImage from "/blog_header.webp"
 import { MdDateRange } from "react-icons/md"
 import { FaTags } from "react-icons/fa"
+import ChatSupport from "../../../components/chatSupport/chatSupport"
 
 export default function BlogDetails() {
   const { blogId } = useParams()
@@ -65,6 +66,7 @@ export default function BlogDetails() {
           <p className={s.blogType}>{blog.b_type}</p>
         </div>
       </div>
+      <ChatSupport />
     </>
   )
 }

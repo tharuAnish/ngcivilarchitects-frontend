@@ -9,6 +9,7 @@ import headerImage from "/blog_header.webp"
 import { BsArrowRightCircle } from "react-icons/bs"
 import { MdDateRange } from "react-icons/md"
 import { FaTags } from "react-icons/fa"
+import ChatSupport from "../../components/chatSupport/chatSupport"
 
 export default function Blogs() {
   const url = "http://127.0.0.1:8000/api/blog/"
@@ -82,6 +83,7 @@ export default function Blogs() {
             </div>
           ))}
       </div>
+      <ChatSupport />
       <Footer />
     </>
   )

@@ -4,6 +4,7 @@ import s from "./about.module.css"
 import Team from "./team/team"
 import logo from "/ngLogoBuildingWhite.png"
 import companyImg from "/company_about.png"
+import ChatSupport from "../../components/chatSupport/chatSupport"
 
 export default function About() {
   return (
@@ -57,6 +58,7 @@ export default function About() {
           </div>
         </div>
       </div>
+      <ChatSupport />
       <Team />
       <Footer />
     </div>

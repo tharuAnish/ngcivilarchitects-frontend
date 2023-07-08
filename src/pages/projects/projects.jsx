@@ -8,6 +8,7 @@ import s from "./projects.module.css"
 import headerImage from "/carousel3.webp"
 import { MdDateRange } from "react-icons/md"
 import { FaTags } from "react-icons/fa"
+import ChatSupport from "../../components/chatSupport/chatSupport"
 
 export default function Projects() {
   const url = "http://127.0.0.1:8000/api/project/"
@@ -96,6 +97,7 @@ export default function Projects() {
             )
           })}
       </div>
+      <ChatSupport />
       <Tagline
         tagH4="WE CAN HELP BUILD YOUR PROJECT"
         tagP="TELL US ABOUT YOUR PROJECT"
