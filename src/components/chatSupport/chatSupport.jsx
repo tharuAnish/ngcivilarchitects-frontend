@@ -21,20 +21,16 @@ const getRandomQuote = () => {
 
 //jokes
 const jokes = [
-  "What did the traffic light say to the car? Don't look! I'm about to change.",
   "How did the civil engineer propose to their partner? They got down on one knee and said, Will you be my foundation for life?",
   'A teacher asked her students to use the word "beans" in a sentence. "My father grows beans," said one girl. "My mother cooks beans," said a boy. A third student spoke up, "We are all human beans.',
   "What did the ocean say to the beach? Nothing, it just waved.",
   "What do you call a group of civil engineers at a party? A concrete mixer!",
-  "What did the left eye say to the right eye? Between you and me, something smells.",
   "Why did the construction company start offering yoga classes to its employees? Because they wanted to help them find balance between steel beams and inner peace!",
   "What did the big flower say to the little flower? Hi, bud!",
   "Why did the construction company's picnic get canceled? Because they couldn't find a good foundation for the potato salad!",
   "What did the big chimney say to the little chimney? You're too young to smoke.",
   "What did the construction company say when they accidentally built a door in the middle of a wall? We're just creating more opportunities for entry and exit!",
-  "What did the big hand say to the little hand? Got a minute?",
   "I was going to tell you a joke about boxing but I forgot the punch line.",
-  "What did the rug say to the floor? Don't move, I've got you covered.",
   'A child asked his father, "How were people born?" So his father said, "Adam and Eve made babies, then their babies became adults and made babies, and so on." The child then went to his mother, asked her the same question and she told him, "We were monkeys then we evolved to become like we are now." The child ran back to his father and said, "You lied to me!" His father replied, "No, your mom was talking about her side of the family."',
   "What month is the shortest of the year? May, it only has three letters.",
   "What did the stamp say to the envelope? Stick with me and we'll go places.",

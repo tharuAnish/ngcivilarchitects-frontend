@@ -65,27 +65,7 @@
   z-index: 999;
   transition: all 0.4s ease-in-out;
   box-shadow: 2px 6px 20px 6px rgb(0 0 0 / 20%);
-  background: rgb(255, 166, 133);
-
-  background: linear-gradient(
-    90deg,
-    hsla(16, 100%, 76%, 1) 0%,
-    hsla(49, 100%, 81%, 1) 100%
-  );
-
-  background: -moz-linear-gradient(
-    90deg,
-    hsla(16, 100%, 76%, 1) 0%,
-    hsla(49, 100%, 81%, 1) 100%
-  );
-
-  background: -webkit-linear-gradient(
-    90deg,
-    hsla(16, 100%, 76%, 1) 0%,
-    hsla(49, 100%, 81%, 1) 100%
-  );
-
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFA585", endColorstr="#FFEDA0", GradientType=1 );
+  background-color: #ffefb9;
 }
 
 .chat-header {
@@ -93,9 +73,9 @@
   justify-content: space-between;
   align-items: center;
   margin-block: auto;
-  border-bottom: 1px solid rgb(253, 214, 39);
-  padding-block: 0.5rem;
-  padding-inline: 0.5rem;
+  border-bottom: 1px solid #e0cc91;
+  padding-block: 0.7rem;
+  padding-inline: 0.7rem 1rem;
 }
 
 .h2 {
@@ -109,7 +89,7 @@
 .close-button {
   background: none;
   border: none;
-  font-size: 20px;
+  font-size: 22px;
   cursor: pointer;
 }
 
@@ -155,6 +135,7 @@
 
 .userAvatar {
   margin-left: auto;
+  background: white;
 }
 
 .message-text {
@@ -163,7 +144,7 @@
 
   /* width: 180px; */
   height: auto;
-  background-color: rgba(238, 238, 238, 0.5);
+  background-color: #fde699;
   padding: 10px;
   position: relative;
   margin-inline: 20px;
@@ -180,9 +161,13 @@
   left: -15px;
   top: 4px;
   border-top: 15px solid transparent;
-  border-right: 15px solid rgba(238, 238, 238, 0.5);
+  border-right: 15px solid white;
   border-left: none;
   border-bottom: 15px solid transparent;
+}
+
+.bot-text {
+  background-color: white;
 }
 
 .message-text.user-text:after {
@@ -192,8 +177,12 @@
   top: 4px;
   border-top: 15px solid transparent;
   border-right: none;
-  border-left: 15px solid rgba(238, 238, 238, 0.5);
+  border-left: 15px solid #fde699;
   border-bottom: 15px solid transparent;
+}
+
+.user-text {
+  color: black;
 }
 
 .botLink {
@@ -208,7 +197,7 @@
   align-items: center;
   vertical-align: middle;
   padding: 10px;
-  border-top: 1px solid rgb(252, 124, 77);
+  border-top: 1px solid #e0cc91;
 }
 
 .chatInput[type="text"] {
@@ -218,6 +207,7 @@
   border: 1px solid #ccc;
   background-color: #ffffff9c;
   padding: 0.35rem;
+  padding-block: 0.45rem;
   /* padding-right: 3rem; */
   font-size: 0.875rem;
   line-height: 1.25rem;
