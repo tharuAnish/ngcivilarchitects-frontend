@@ -103,6 +103,7 @@
 
 .chat-container::-webkit-scrollbar {
   background-color: rgba(236, 233, 233, 0.6);
+  display: none;
 }
 
 .message {
@@ -144,7 +145,7 @@
 
   /* width: 180px; */
   height: auto;
-  background-color: #fde699;
+  background-color: #ffe27f;
   padding: 10px;
   position: relative;
   margin-inline: 20px;
@@ -177,12 +178,12 @@
   top: 4px;
   border-top: 15px solid transparent;
   border-right: none;
-  border-left: 15px solid #fde699;
+  border-left: 15px solid #ffe27f;
   border-bottom: 15px solid transparent;
 }
 
 .user-text {
-  color: black;
+  color: rgba(0, 0, 0, 0.89);
 }
 
 .botLink {
