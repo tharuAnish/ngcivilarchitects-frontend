@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react"
 import "./chatSupport.css"
 import { FiUser } from "react-icons/fi"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 
 //quots
 const quotes = [
@@ -393,6 +393,7 @@ const ChatWindow = ({ onClose }) => {
 
 export default function ChatSupport() {
   const [isChatOpen, setIsChatOpen] = useState(false)
+  const location = useLocation()
 
   const handleChatClick = () => {
     setIsChatOpen(true)
@@ -403,16 +404,18 @@ export default function ChatSupport() {
   }
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsChatOpen(true)
-    }, 8000)
+    if (location.pathname === "/") {
+      const timer = setTimeout(() => {
+        setIsChatOpen(true)
+      }, 8000)
 
-    return () => clearTimeout(timer)
-  }, [])
+      return () => clearTimeout(timer)
+    }
+  }, [location.pathname])
 
   return (
     <div className="App">
-      {!isChatOpen && <ChatCircle onClick={handleChatClick} />}
+      <ChatCircle onClick={handleChatClick} />
       {isChatOpen && <ChatWindow onClose={handleCloseChat} />}
     </div>
   )
