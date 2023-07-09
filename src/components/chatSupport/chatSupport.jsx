@@ -301,7 +301,7 @@ const ChatWindow = ({ onClose }) => {
           <li>Operating hours.</li>
           <li>Tell me about yourself.</li>
           <li>Yes, I can tell some jokes too.</li>
-          <li>Or, you can just ask a quote.</li>
+          <li>Or, you can just ask for a quote.</li>
         </>
       ),
     },
