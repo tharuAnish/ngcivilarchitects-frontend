@@ -133,6 +133,17 @@
 }
 
 @media screen and (max-width: 500px) {
+  .titleH2 {
+    font-size: 2rem;
+  }
+  .servicePara {
+    margin-block: 2rem;
+    margin-inline: auto;
+    font-size: 1.1rem;
+    max-width: 90vw;
+    text-align: center;
+    line-height: 25px;
+  }
   .project {
     max-width: 95%;
   }

@@ -4,7 +4,7 @@
 
 .topFooterWrapper {
   background-color: rgb(12, 12, 12);
-  padding-block: 3rem 2rem;
+  padding-block: 3rem 1rem;
 }
 
 .topFooter {
@@ -222,6 +222,9 @@
   .topRight2 {
     flex-basis: 45%;
   }
+  .followUs {
+    margin-left: 2.1rem;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -254,7 +257,7 @@
   }
 
   .followUs {
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
 }
 
