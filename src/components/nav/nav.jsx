@@ -20,7 +20,7 @@ export default function Nav() {
       <nav className={styles.nav}>
         <div className="wrapper">
           <div className={styles.navWrapper}>
-            <Link href="/" className={styles.logo}>
+            <Link to="/" className={styles.logo}>
               <div className={styles.img}>
                 <img src={logo} alt="logo" placeholder="blur" />
               </div>

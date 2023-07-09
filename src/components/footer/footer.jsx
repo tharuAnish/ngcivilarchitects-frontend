@@ -111,49 +111,51 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className={`${s.followUs} wrapper`}>
-          {/* <h4 className={s.h4}>Follow Us:</h4> */}
-          <p>Follow Us:</p>
-          <Link
-            className={s.facebook}
-            href="https://www.facebook.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaFacebook />
-          </Link>
-          <Link
-            className={s.instagram}
-            href="https://www.instagram.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaInstagram />
-          </Link>
-          <Link
-            className={s.linkedin}
-            href="https://www.linkedin.com/company/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaLinkedin />
-          </Link>
-          <Link
-            className={s.youtube}
-            href="https://www.youtube.com/channel/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaYoutube />
-          </Link>
-          <Link
-            className={s.twitter}
-            href="https://twitter.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaTwitter />
-          </Link>
+        <div className="wrapper">
+          <div className={s.followUs}>
+            {/* <h4 className={s.h4}>Follow Us:</h4> */}
+            <p>Follow Us:</p>
+            <Link
+              className={s.facebook}
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaFacebook />
+            </Link>
+            <Link
+              className={s.instagram}
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaInstagram />
+            </Link>
+            <Link
+              className={s.linkedin}
+              href="https://www.linkedin.com/company/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaLinkedin />
+            </Link>
+            <Link
+              className={s.youtube}
+              href="https://www.youtube.com/channel/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaYoutube />
+            </Link>
+            <Link
+              className={s.twitter}
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaTwitter />
+            </Link>
+          </div>
         </div>
       </div>
       <div className={s.bottomFooter}>
