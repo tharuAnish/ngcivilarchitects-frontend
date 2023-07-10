@@ -8,6 +8,7 @@ import headerImage from "/blog_header.webp"
 import { MdDateRange } from "react-icons/md"
 import { FaTags } from "react-icons/fa"
 import ChatSupport from "../../../components/chatSupport/chatSupport"
+import Loading from "../../../components/loading/loading"
 
 export default function BlogDetails() {
   const { blogId } = useParams()
@@ -37,8 +38,12 @@ export default function BlogDetails() {
       />
       <div className="wrapper">
         <div className={s.blog}>
-          {isPending && <p>Loading...</p>}
-          {error && <p>{error}</p>}
+          {isPending && <Loading />}
+          {error && (
+            <div className={s.error}>
+              <img src={error} alt="Error" />
+            </div>
+          )}
           <h4 className={s.name}>{blog.b_name}</h4>
           <div className={s.subText}>
             <div className={s.subTextContainner}>

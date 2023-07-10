@@ -28,7 +28,7 @@ export const useFetch = (url) => {
           console.log("the fetch was aborted")
         } else {
           setIsPending(false)
-          setError("Could not fetch the data")
+          setError("/nodata.png")
         }
       }
     }

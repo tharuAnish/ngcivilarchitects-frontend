@@ -3,6 +3,7 @@ import s from "./team.module.css"
 import { Link } from "react-router-dom"
 import { MdOutlineEmail } from "react-icons/md"
 import { FaLinkedin, FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa"
+import Loading from "../../../components/loading/loading"
 
 export default function Team() {
   const url = "http://127.0.0.1:8000/api/team/"
@@ -16,8 +17,12 @@ export default function Team() {
     <div className={`${s.teams}wrapper`}>
       <h2 className={s.h2}>Our Team</h2>
       <p className={s.teamSubHeader}>Introducing Our Skilled Team Members</p>
-      {isPending && <p>Loading...</p>}
-      {error && <p>{error}</p>}
+      {isPending && <Loading />}
+      {error && (
+        <div className={s.error}>
+          <img src={error} alt="Error" />
+        </div>
+      )}
       {teams &&
         sortedTeams.map((team) => (
           <div className={s.team} id={team.id} key={team.id}>

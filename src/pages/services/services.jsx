@@ -36,7 +36,11 @@ export default function Services() {
 
         <div className={s.services}>
           {isPending && <Loading />}
-          {error && <p>{error}</p>}
+          {error && (
+            <div className={s.error}>
+              <img src={error} alt="Error" />
+            </div>
+          )}
           {services &&
             services
               .sort((a, b) => a.s_rank - b.s_rank) // Sort services based on s_rank in ascending order

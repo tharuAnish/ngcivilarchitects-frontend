@@ -119,7 +119,9 @@
 @media screen and (max-width: 1000px) {
   .aboutHeader {
     flex-direction: column;
-    gap: 0rem;
+    gap: 1rem;
+    min-height: 400px;
+    max-height: 40vh;
   }
   .h4 {
     font-size: 2.5rem;
@@ -155,9 +157,15 @@
   .companyDesc {
     flex-basis: 65%;
   }
+  .companyh4 {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 500px) {
+  .aboutHeader {
+    height: 300px;
+  }
   .logo {
     height: 170px;
   }
@@ -183,11 +191,14 @@
 
   .companyDesc {
     flex-basis: 65%;
+    max-width: 99vw;
+    margin-inline: auto;
   }
   .companyh4 {
     font-size: 1.8rem;
     font-weight: 600;
     line-height: 2rem;
+    text-align: center;
   }
   .highlights {
     font-size: 1.2rem;
