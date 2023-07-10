@@ -7,7 +7,7 @@ import { MdDateRange } from "react-icons/md"
 import { FaTags } from "react-icons/fa"
 
 export default function HomeProjects() {
-  const url = "http://127.0.0.1:8000/api/project/"
+  const url = "https://namoanish.pythonanywhere.com/api/project/"
   const { data: apiResponse, isPending, error } = useFetch(url)
   const projects = apiResponse?.project || []
 
@@ -45,7 +45,7 @@ export default function HomeProjects() {
                 <div className={s.projectImg}>
                   <img
                     className={s.img}
-                    src={`http://localhost:8000${project.p_pic}`}
+                    src={`https://namoanish.pythonanywhere.com${project.p_pic}`}
                     alt="project img"
                     loading="lazy"
                   />

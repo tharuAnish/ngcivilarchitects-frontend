@@ -7,7 +7,7 @@ import { RiDoubleQuotesL } from "react-icons/ri"
 import Loading from "../loading/loading"
 
 export default function Testimony() {
-  const url = "http://127.0.0.1:8000/api/testimonials/"
+  const url = "https://namoanish.pythonanywhere.com/api/testimonials/"
   const { data: apiResponse, isPending, error } = useFetch(url)
   const testimonials = apiResponse?.testimonials || []
 
@@ -55,7 +55,7 @@ export default function Testimony() {
                 <div className={s.imgDiv}>
                   <img
                     className={s.clientImg}
-                    src={`http://localhost:8000${testimonial.client_pic}`}
+                    src={`https://namoanish.pythonanywhere.com${testimonial.client_pic}`}
                     alt="client img"
                     loading="lazy"
                   />

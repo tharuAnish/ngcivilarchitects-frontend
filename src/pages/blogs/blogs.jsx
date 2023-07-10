@@ -13,7 +13,7 @@ import ChatSupport from "../../components/chatSupport/chatSupport"
 import Loading from "../../components/loading/loading"
 
 export default function Blogs() {
-  const url = "http://127.0.0.1:8000/api/blog/"
+  const url = "https://namoanish.pythonanywhere.com/api/blog/"
   const { data: apiResponse, isPending, error } = useFetch(url)
   const blogs = apiResponse?.blog || []
 
@@ -57,7 +57,7 @@ export default function Blogs() {
             <div className={s.blog} key={blog.id}>
               <img
                 className={s.img}
-                src={`http://localhost:8000${blog.b_pic}`}
+                src={`https://namoanish.pythonanywhere.com${blog.b_pic}`}
                 alt="blog img"
                 loading="lazy"
               />

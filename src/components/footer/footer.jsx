@@ -161,7 +161,15 @@ export default function Footer() {
       <div className={s.bottomFooter}>
         <h5 className={s.bottomLeft}>
           {" "}
-          &#169; {new Date().getFullYear()} Designed and Developed by AnishTharu{" "}
+          &#169; {new Date().getFullYear()} Designed and Developed by{" "}
+          <Link
+            to="https://www.linkedin.com/in/tharuanish/"
+            target="_blank"
+            rel="noreferrer"
+            className={s.nameLink}
+          >
+            AnishTharu
+          </Link>{" "}
         </h5>
       </div>
     </footer>

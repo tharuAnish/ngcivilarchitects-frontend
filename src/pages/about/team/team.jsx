@@ -6,7 +6,7 @@ import { FaLinkedin, FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa"
 import Loading from "../../../components/loading/loading"
 
 export default function Team() {
-  const url = "http://127.0.0.1:8000/api/team/"
+  const url = "https://namoanish.pythonanywhere.com/api/team/"
   const { data: apiResponse, isPending, error } = useFetch(url)
   const teams = apiResponse?.team || []
 
@@ -29,7 +29,7 @@ export default function Team() {
             <div className={s.teamLeft}>
               <img
                 className={s.staffImg}
-                src={`http://localhost:8000${team.staff_pic}`}
+                src={`https://namoanish.pythonanywhere.com${team.staff_pic}`}
                 alt="staff img"
                 loading="lazy"
               />
