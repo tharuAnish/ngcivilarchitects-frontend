@@ -10,7 +10,7 @@ import Loading from "../../components/loading/loading"
 import ChatSupport from "../../components/chatSupport/chatSupport"
 
 export default function Services() {
-  const url = "http://127.0.0.1:8000/api/services/"
+  const url = "https://namoanish.pythonanywhere.com/api/services/"
   const { data: apiResponse, isPending, error } = useFetch(url)
   const services = apiResponse?.services || []
   return (
@@ -49,7 +49,7 @@ export default function Services() {
                   <img
                     loading="lazy"
                     className={s.serviceImg}
-                    src={`http://localhost:8000${service.s_pic}`}
+                    src={`https://namoanish.pythonanywhere.com${service.s_pic}`}
                     alt="service img"
                   />
                   <h2 className={s.serviceTitle}>{service.s_name}</h2>

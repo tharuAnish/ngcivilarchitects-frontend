@@ -13,7 +13,7 @@ import Loading from "../../../components/loading/loading"
 export default function BlogDetails() {
   const { blogId } = useParams()
 
-  const url = `http://127.0.0.1:8000/api/blog/${blogId}/`
+  const url = `https://namoanish.pythonanywhere.com/api/blog/${blogId}/`
   const { data: apiResponse, isPending, error } = useFetch(url)
   const blog = apiResponse?.blog || []
 
@@ -58,7 +58,7 @@ export default function BlogDetails() {
           </div>
           <img
             className={s.img}
-            src={`http://localhost:8000${blog.b_pic}`}
+            src={`https://namoanish.pythonanywhere.com${blog.b_pic}`}
             alt="blog img"
             loading="lazy"
           />
