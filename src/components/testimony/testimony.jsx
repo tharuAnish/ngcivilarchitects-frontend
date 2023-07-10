@@ -33,7 +33,11 @@ export default function Testimony() {
       <div className={s.testimonialsWrapper}>
         <h4 className={s.h4}>Testimonials</h4>
         {isPending && <Loading />}
-        {error && <p>{error}</p>}
+        {error && (
+          <div className={s.error}>
+            <img src={error} alt="Error" />
+          </div>
+        )}
         <Carousel
           infiniteLoop
           autoPlay

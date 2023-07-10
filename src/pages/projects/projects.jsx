@@ -49,7 +49,11 @@ export default function Projects() {
           </p>
         </div>
         {isPending && <Loading />}
-        {error && <p>{error}</p>}
+        {error && (
+          <div className={s.error}>
+            <img src={error} alt="Error" />
+          </div>
+        )}
         {projects &&
           sortedProjects.map((project) => {
             return (

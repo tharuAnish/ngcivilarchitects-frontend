@@ -32,7 +32,11 @@ export default function HomeProjects() {
     <div className={` ${s.projectWrapper} wrapper`}>
       <h4 className={s.h4}>Our Recent Projects</h4>
       {isPending && <Loading />}
-      {error && <p>{error}</p>}
+      {error && (
+        <div className={s.error}>
+          <img src={error} alt="Error" />
+        </div>
+      )}
       <div className={s.projects}>
         {projects &&
           limitedProjects.map((project) => {

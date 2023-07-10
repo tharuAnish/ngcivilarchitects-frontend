@@ -32,6 +32,13 @@
   line-height: 25px;
 }
 
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
 .services {
   display: flex;
   flex-wrap: wrap;

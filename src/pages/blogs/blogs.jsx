@@ -10,6 +10,7 @@ import { BsArrowRightCircle } from "react-icons/bs"
 import { MdDateRange } from "react-icons/md"
 import { FaTags } from "react-icons/fa"
 import ChatSupport from "../../components/chatSupport/chatSupport"
+import Loading from "../../components/loading/loading"
 
 export default function Blogs() {
   const url = "http://127.0.0.1:8000/api/blog/"
@@ -45,8 +46,12 @@ export default function Blogs() {
       />
       <h2 className={s.h2}>Blogs</h2>
       <div className={`${s.blogs} wrapper`}>
-        {isPending && <p>Loading...</p>}
-        {error && <p>{error}</p>}
+        {isPending && <Loading />}
+        {error && (
+          <div className={s.error}>
+            <img src={error} alt="Error" />
+          </div>
+        )}
         {blogs &&
           sortedBlogs.map((blog) => (
             <div className={s.blog} key={blog.id}>

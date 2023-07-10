@@ -7,11 +7,13 @@ import Blogs from "./pages/blogs/blogs"
 import Contact from "./pages/contact/contact"
 import BlogDetails from "./pages/blogs/blogPage/blogDetails"
 import s from "./App.module.css"
+import ScrollToTop from "./components/scrollToTop/scrollToTop"
 
 function App() {
   return (
     <>
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />

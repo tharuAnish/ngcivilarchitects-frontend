@@ -36,6 +36,13 @@
   color: var(--color-blue);
 }
 
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
 .imgDiv {
   width: 100px;
   height: 100px;
