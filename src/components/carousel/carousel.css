@@ -17,7 +17,7 @@
   height: calc(100vh - 67.19px);
   width: auto;
   object-fit: cover;
-  filter: brightness(60%);
+  filter: brightness(70%);
 }
 
 /* .zoomIn {
@@ -142,6 +142,9 @@
   }
   .carouselBtnDiv {
     gap: 20px;
+  }
+  .carousel-img {
+    filter: brightness(70%) blur(1.8px);
   }
 }
 

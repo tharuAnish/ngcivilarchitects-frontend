@@ -68,6 +68,7 @@ export default function Projects() {
                     />
                   </div>
                   <div className={s.projectDetail}>
+                    <h4 className={s.projectName}>{project.p_name}</h4>
                     <div className={s.subText}>
                       <div className={s.subTextContainner}>
                         <MdDateRange />
@@ -83,7 +84,7 @@ export default function Projects() {
                     </div>
                     <hr className={s.hr} />
                     {/* <p className={s.projectType}>{project.p_type}</p> */}
-                    <h4 className={s.projectName}>{project.p_name}</h4>
+
                     <div
                       className={s.projectDesc}
                       dangerouslySetInnerHTML={{ __html: project.p_desc }}
@@ -97,6 +98,7 @@ export default function Projects() {
                     )}
                   </div>
                 </div>
+                <hr className={s.bottomHr} />
               </div>
             )
           })}

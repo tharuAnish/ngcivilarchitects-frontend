@@ -30,7 +30,7 @@ export default function Contact() {
             </div>
             <div className={s.QCdesc}>
               <p className={s.companyName}>Company Number</p>
-              <p>+977 </p>
+              <p>081 53 8195</p>
             </div>
           </div>
           <Link

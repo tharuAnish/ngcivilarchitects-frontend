@@ -1,5 +1,5 @@
 import styles from "./homeAbout.module.css"
-import ngLogo from "../../../assets/ngLogoBuildingWhite.png"
+import ngLogo from "/ngLogoBuildingWhite.png"
 import about1 from "/company_about.png"
 import about2 from "/engineer_worker.png"
 import about3 from "/about3.png"

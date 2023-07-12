@@ -65,7 +65,7 @@
   z-index: 999;
   transition: all 0.4s ease-in-out;
   box-shadow: 2px 6px 20px 6px rgb(0 0 0 / 20%);
-  background-color: #ffefb9;
+  background-color: white;
 }
 
 .chat-header {
@@ -73,7 +73,7 @@
   justify-content: space-between;
   align-items: center;
   margin-block: auto;
-  border-bottom: 1px solid #e0cc91;
+  border-bottom: 1px solid rgb(228, 228, 228);
   padding-block: 0.7rem;
   padding-inline: 0.7rem 1rem;
 }
@@ -82,7 +82,7 @@
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 500;
-  --color-text-darkgrey: #333333;
+  color: var(--color-text-darkgrey);
   margin-block: auto;
 }
 
@@ -91,6 +91,7 @@
   border: none;
   font-size: 22px;
   cursor: pointer;
+  color: var(--color-text-darkgrey);
 }
 
 /* Message box starts here */
@@ -145,7 +146,7 @@
 
   /* width: 180px; */
   height: auto;
-  background-color: #ffe27f;
+  background-color: #fce085;
   padding: 10px;
   position: relative;
   margin-inline: 20px;
@@ -162,13 +163,13 @@
   left: -15px;
   top: 4px;
   border-top: 15px solid transparent;
-  border-right: 15px solid white;
+  border-right: 15px solid #fff6d9e1;
   border-left: none;
   border-bottom: 15px solid transparent;
 }
 
 .bot-text {
-  background-color: white;
+  background-color: #fff6d9e1;
 }
 
 .message-text.user-text:after {
@@ -178,7 +179,7 @@
   top: 4px;
   border-top: 15px solid transparent;
   border-right: none;
-  border-left: 15px solid #ffe27f;
+  border-left: 15px solid #fce085;
   border-bottom: 15px solid transparent;
 }
 
@@ -198,7 +199,7 @@
   align-items: center;
   vertical-align: middle;
   padding: 10px;
-  border-top: 1px solid #e0cc91;
+  border-top: 1px solid rgb(228, 228, 228);
 }
 
 .chatInput[type="text"] {
@@ -236,4 +237,10 @@
 }
 .chatBtn:hover {
   background-color: #2119b8;
+}
+
+@media screen and (max-width: 400px) {
+  .chat-window {
+    max-width: 88%;
+  }
 }

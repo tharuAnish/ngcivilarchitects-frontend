@@ -218,10 +218,14 @@
     width: 97%;
   }
   .leftForm {
-    padding-inline: 1.4rem;
+    padding-inline: 1rem;
     margin-block: 2rem 0.5rem;
   }
   .rightForm {
-    padding-inline: 0.7rem;
+    padding-inline: 0.5rem;
+  }
+  .form {
+    padding: 0.5rem;
+    margin-block: 1rem;
   }
 }

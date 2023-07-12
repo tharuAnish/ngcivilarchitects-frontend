@@ -85,13 +85,14 @@
   font-size: 1.8rem;
   font-weight: 500;
   margin: 10px 0;
-  color: rgba(0, 0, 0, 0.856);
+  color: rgba(255, 247, 235, 0.952);
 }
 .point1P {
   font-size: 1.1rem;
   max-width: 400px;
   text-align: center;
   line-height: 25px;
+  color: rgba(255, 237, 209, 0.952);
 }
 
 /* Problem Point 2 */

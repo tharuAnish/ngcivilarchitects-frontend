@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import s from "./footer.module.css"
-import logo from "../../assets/ngLogoBuildingWhite.png"
+import logo from "/ngLogoBuildingWhite.png"
 import { LuPhoneCall } from "react-icons/lu"
 import { AiOutlineMail } from "react-icons/ai"
 import { HiOutlineLocationMarker } from "react-icons/hi"
@@ -75,7 +75,7 @@ export default function Footer() {
                 </Link>
                 <Link className={s.linkFlex}>
                   <LuPhoneCall className={s.icon} />
-                  +977 986-942-1800
+                  081 53 8195
                 </Link>
                 <Link
                   className={s.linkFlex}
