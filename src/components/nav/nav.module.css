@@ -11,6 +11,23 @@
   box-shadow: 0 3px 20px rgb(0 0 0 / 40%);
   display: flex;
   align-items: center;
+  transition: all 0.4s ease-in-out;
+}
+
+.blurNav {
+  /* background-color: #0a0a0af8; */
+  color: white;
+  height: 67.2px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(3px);
+  box-shadow: 0 3px 20px rgba(41, 41, 41, 0.11);
+  right: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
 }
 
 .logo {
@@ -53,7 +70,7 @@
   background-image: linear-gradient(30deg, #af4a0f, #e47e24);
   background-size: 100% auto;
   font-family: inherit;
-  padding: 0.6em 1.5em;
+  /* padding: 0.6em 1.5em; */
   margin: 0 20px;
   padding: 9px 24px;
   font-size: 1rem;
@@ -98,7 +115,7 @@
   gap: 24px;
   padding-inline: 20px;
   font-size: 1.5rem;
-  background-color: #000000be;
+  background-color: #363636be;
   backdrop-filter: blur(7px);
   position: fixed;
   top: 67.2px;
@@ -106,7 +123,7 @@
   right: 0;
   bottom: 0;
   z-index: 999;
-  border-bottom: 2px solid var(--color-orange-deep);
+  /* border-bottom: 2px solid var(--color-orange-deep); */
 }
 
 .mobilelogo {
@@ -128,6 +145,11 @@
 }
 
 @media screen and (max-width: 500px) {
+  .blurNav {
+    background-color: rgba(245, 245, 245, 0.082);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 3px 20px rgba(41, 41, 41, 0.11);
+  }
   .img {
     width: 40px;
     height: 40px;
@@ -142,7 +164,7 @@
   }
   .sideMenu {
     gap: 25px;
-    background-color: #000000b0;
+    background-color: #4e4e4e8e;
     backdrop-filter: blur(20px);
   }
   .img {
