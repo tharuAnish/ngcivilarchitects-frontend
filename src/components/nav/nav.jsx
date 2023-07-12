@@ -2,8 +2,9 @@ import styles from "./nav.module.css"
 import { Link } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { MdMenu, MdClose } from "react-icons/md"
-import logo from "../../assets/ngLogoNoBg.png"
+import logo from "/ngLogoNoBg.png"
 import NavLink from "../navlink/navlink"
+import { useLocation } from "react-router-dom"
 
 export default function Nav() {
   const [isMenu, setIsMenu] = useState(false)
@@ -15,6 +16,23 @@ export default function Nav() {
       document.body.style.overflow = "unset"
     }
   }, [isMenu])
+
+  // blurred navbar
+  const location = useLocation()
+  const isHomePage = location.pathname === "/"
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 100
+      setIsMenu(isScrolled)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
   return (
     <>
       <nav className={styles.nav}>

@@ -37,7 +37,7 @@
 }
 
 .project {
-  background-color: rgb(241, 241, 241);
+  background-color: rgb(233, 233, 233);
   padding: 10px;
   border-radius: 0.6rem;
   box-shadow: 2px 5px 22px rgba(0, 0, 0, 0.199);
@@ -138,8 +138,8 @@
     font-size: 2rem;
   }
   .project {
-    max-width: 90%;
-    min-width: 90%;
+    max-width: 100%;
+    min-width: 100%;
   }
   .projectImg {
     height: 200px;
