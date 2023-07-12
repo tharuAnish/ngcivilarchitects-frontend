@@ -8,6 +8,10 @@ import { useLocation } from "react-router-dom"
 
 export default function Nav() {
   const [isMenu, setIsMenu] = useState(false)
+  const location = useLocation()
+  const isHomePage = location.pathname === "/"
+
+  const [isScrolled, setIsScrolled] = useState(false) // Define isScrolled here
 
   useEffect(() => {
     if (isMenu) {
@@ -17,25 +21,27 @@ export default function Nav() {
     }
   }, [isMenu])
 
-  // blurred navbar
-  const location = useLocation()
-  const isHomePage = location.pathname === "/"
-
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 100
-      setIsMenu(isScrolled)
+      if (window.scrollY > window.innerHeight) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
     }
 
     window.addEventListener("scroll", handleScroll)
+
     return () => {
       window.removeEventListener("scroll", handleScroll)
     }
   }, [])
 
+  const navClassName = isHomePage && !isScrolled ? styles.blurNav : styles.nav
+
   return (
     <>
-      <nav className={styles.nav}>
+      <nav className={navClassName}>
         <div className="wrapper">
           <div className={styles.navWrapper}>
             <Link to="/" className={styles.logo}>
