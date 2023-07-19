@@ -3,19 +3,39 @@
   display: flex;
   /* flex-direction: row-reverse; */
 
-  background-color: var(--color-black-1);
+  /* background-color: var(--color-black-1); */
   position: relative;
+  /* background: rgb(255, 166, 133);
+
+  background: linear-gradient(
+    90deg,
+    hsla(16, 100%, 76%, 1) 0%,
+    hsla(49, 100%, 81%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(16, 100%, 76%, 1) 0%,
+    hsla(49, 100%, 81%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(16, 100%, 76%, 1) 0%,
+    hsla(49, 100%, 81%, 1) 100%
+  ); */
 }
 .aboutleft,
-.whyusright {
+.aboutright {
   width: 50%;
   min-width: 50%;
 }
 
 .aboutright {
-  background-color: var(--color-orange);
+  /* background-color: var(--color-orange); */
   color: #e7e7e7;
   width: 100%;
+  background-color: #f3f3f3;
 }
 .aboutleft {
   height: calc(100vh - 67.2px);
@@ -27,10 +47,10 @@
   position: sticky;
   top: 67.1px;
   z-index: 1;
-  background-color: #dedcdb;
+  background-color: #f3f3f3;
 }
 .aboutImg {
-  max-height: 14rem;
+  max-height: 200px;
   width: auto;
   height: 100%;
   /* border: 0.23rem solid black; */
@@ -59,6 +79,41 @@
   opacity: 0.7;
 }
 
+.button {
+  cursor: pointer;
+  font-weight: 700;
+  font-family: Helvetica, "sans-serif";
+  transition: all 0.2s;
+  padding: 11px 25px;
+  border-radius: 100px;
+  background: var(--color-orange-deep);
+  border: 1px solid transparent;
+  display: flex;
+  align-items: space-between;
+  font-size: 15px;
+  margin-top: 2rem;
+  margin-inline: auto;
+  /* width: 8.8rem; */
+}
+
+.button:hover {
+  background: var(--color-orange-deep);
+}
+
+.icon {
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.button:hover .icon {
+  transform: translateX(5px);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
 .point1,
 .point2,
 .point3 {
@@ -85,14 +140,14 @@
   font-size: 1.8rem;
   font-weight: 500;
   margin: 10px 0;
-  color: rgba(255, 247, 235, 0.952);
+  color: var(--color-orange-deep);
 }
 .point1P {
   font-size: 1.1rem;
-  max-width: 400px;
+  max-width: 80%;
   text-align: center;
   line-height: 25px;
-  color: rgba(255, 237, 209, 0.952);
+  color: rgb(100, 94, 85);
 }
 
 /* Problem Point 2 */
@@ -102,6 +157,10 @@
 }
 
 /* Media Queries */
+
+@media screen and (min-width: 1000px) {
+}
+
 @media screen and (max-width: 1000px) {
   .aboutleft {
     width: 40%;
@@ -118,6 +177,9 @@
 }
 
 @media screen and (max-width: 810px) {
+  .button {
+    display: none;
+  }
   .about {
     flex-direction: column;
   }
@@ -160,5 +222,10 @@
   }
   .point2 {
     flex-direction: column;
+  }
+  .point1Svg,
+  .point2Svg,
+  .point3Svg {
+    height: 200px;
   }
 }

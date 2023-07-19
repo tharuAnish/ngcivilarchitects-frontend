@@ -2,14 +2,7 @@ import React, { useState } from "react"
 import axios from "axios"
 import s from "./contactForm.module.css"
 import ngLogo from "/ngLogoNoBg.png"
-import {
-  FaFacebook,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedin,
-  FaYoutube,
-} from "react-icons/fa"
-import { Link } from "react-router-dom"
+import { FaFacebook, FaTiktok, FaLinkedin } from "react-icons/fa"
 
 export default function ContactForm() {
   const initialFormData = {
@@ -30,7 +23,7 @@ export default function ContactForm() {
 
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/api/contact/",
+        "https://namoanish.pythonanywhere.com/api/contact/",
         formData
       )
       console.log(response.data) // Response from the Django API
@@ -62,46 +55,30 @@ export default function ContactForm() {
           <div className={s.mediaLinks}>
             {/* <h4 className={s.h4}>Follow Us:</h4> */}
             <p>Follow Us:</p>
-            <Link
+            <a
               className={s.facebook}
-              href="https://www.facebook.com/TeamCanWeBe"
+              href="https://www.facebook.com/ngcivilarchitects?mibextid=LQQJ4d"
               target="_blank"
               rel="noreferrer"
             >
               <FaFacebook />
-            </Link>
-            <Link
-              className={s.instagram}
-              href="https://www.instagram.com/canwebeofficial/"
+            </a>
+            <a
+              className={s.tiktok}
+              href="https://www.tiktok.com/@ng_civilarchitects?_t=8dyTtFYntkA&_r=1"
               target="_blank"
               rel="noreferrer"
             >
-              <FaInstagram />
-            </Link>
-            <Link
+              <FaTiktok />
+            </a>
+            <a
               className={s.linkedin}
-              href="https://www.linkedin.com/company/canwebe"
+              href="https://www.linkedin.com/company/"
               target="_blank"
               rel="noreferrer"
             >
               <FaLinkedin />
-            </Link>
-            <Link
-              className={s.youtube}
-              href="https://www.youtube.com/channel/UCZQme48ejS0QY3C4JmWgI4Q"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaYoutube />
-            </Link>
-            <Link
-              className={s.twitter}
-              href="https://twitter.com/teamcanwebe"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaTwitter />
-            </Link>
+            </a>
           </div>
         </div>
         <div className={s.rightForm}>

@@ -54,6 +54,7 @@ export default function Nav() {
               <NavLink link="/" content="HOME" />
               <NavLink link="/services" content="SERVICES" />
               <NavLink link="/projects" content="PROJECTS" />
+              <NavLink link="/courses" content="COURSES" />
               <NavLink link="/about" content="ABOUT" />
               {/* <NavLink link="/team" content="Team" /> */}
               <NavLink link="/blogs" content="BLOGS" />
@@ -91,6 +92,9 @@ export default function Nav() {
           </div>
           <div onClick={() => setIsMenu(false)}>
             <NavLink link="/projects" content="Project" />
+          </div>
+          <div onClick={() => setIsMenu(false)}>
+            <NavLink link="/courses" content="Courses" />
           </div>
           <div onClick={() => setIsMenu(false)}>
             <NavLink link="/about" content="About" />

@@ -126,6 +126,7 @@
 .instagram,
 .linkedin,
 .youtube,
+.tiktok,
 .footerLink {
   transition: all 0.3s ease-in-out;
   flex-shrink: 0;
@@ -172,6 +173,9 @@
 
   .youtube:hover {
     color: #ff0000;
+  }
+  .tiktok:hover {
+    color: #ee1d52;
   }
 }
 

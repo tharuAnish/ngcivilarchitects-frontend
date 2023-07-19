@@ -1,0 +1,166 @@
+.topBg {
+  background-color: #1c1d1f;
+}
+
+.courseTop {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 45vh;
+  max-height: 450px;
+  justify-content: center;
+  align-items: center;
+  max-width: 85%;
+  margin-inline: auto;
+}
+
+.topLeft {
+  flex-basis: 65%;
+}
+
+.topRight {
+  flex-basis: 35%;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 2.3rem;
+  font-weight: 500;
+  color: #e4e4e4;
+  margin-bottom: 10px;
+}
+
+.courseTag {
+  font-size: 1.2rem;
+  font-weight: 100;
+  color: #d1d1d1;
+  margin-bottom: 10px;
+}
+
+/* overview */
+.overview {
+  margin-block: 2rem;
+  max-width: 80%;
+  margin-inline: auto;
+  border: 1px solid #d4d4d4;
+  padding: 1.5rem 1rem;
+}
+.title {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #1c1d1f;
+}
+.overviewP {
+  columns: 2;
+  column-gap: 20px;
+  text-align: justify;
+}
+.overviewP ul {
+  list-style-type: " ✔  ";
+  margin: 0;
+  padding-left: 25px;
+  padding-right: 10px;
+  line-height: 28px;
+  color: #252525;
+}
+
+/* description */
+.description {
+  margin-block: 2rem 3rem;
+  max-width: 80%;
+  margin-inline: auto;
+  padding-inline: 0.8rem;
+}
+
+.descP {
+  line-height: 25px;
+  text-align: justify;
+}
+
+.descP ul {
+  list-style-type: circle;
+  margin: 0;
+  padding-left: 20px;
+  line-height: 28px;
+  color: #252525;
+}
+
+@media screen and (max-width: 1000px) {
+  .courseTop {
+    max-width: 95%;
+  }
+  .name {
+    font-size: 2rem;
+  }
+  .courseTag {
+    font-size: 1.1rem;
+  }
+  .overview {
+    max-width: 90%;
+  }
+  .description {
+    max-width: 90%;
+  }
+}
+@media screen and (max-width: 850px) {
+  .courseTop {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    height: auto;
+    max-height: 600px;
+    justify-content: center;
+    align-items: center;
+    max-width: 85%;
+    margin-inline: auto;
+  }
+  .img {
+    min-width: 80%;
+    margin-top: 1rem;
+  }
+  .topLeft {
+    flex-basis: 35%;
+    margin-bottom: 1rem;
+  }
+
+  .topRight {
+    flex-basis: 65%;
+    margin-inline: auto;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .name {
+    font-size: 1.4rem;
+  }
+  .courseTag {
+    font-size: 1.05rem;
+  }
+  .overviewP {
+    columns: 1;
+    column-gap: 20px;
+    text-align: justify;
+  }
+  .overview {
+    max-width: 95%;
+  }
+  .description {
+    max-width: 95%;
+    padding-inline: 0.5rem;
+  }
+}

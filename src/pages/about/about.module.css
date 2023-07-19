@@ -69,6 +69,8 @@
 
 .companyImg {
   flex-basis: 40%;
+  max-height: 90%;
+  margin-block: auto;
   margin-inline: auto;
 }
 

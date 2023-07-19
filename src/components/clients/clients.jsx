@@ -7,7 +7,7 @@ import img4 from "/client4.png"
 export default function Clients() {
   return (
     <div className="wrapper">
-      <h2 className={s.clientsTitle}>Our Clients</h2>
+      <h2 className={s.clientsTitle}>Our Associates</h2>
       <div className={s.clients}>
         <div className={s.client}>
           <img className={s.img} src={img1} alt="client image" loading="lazy" />

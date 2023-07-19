@@ -6,13 +6,7 @@ import { AiOutlineMail } from "react-icons/ai"
 import { HiOutlineLocationMarker } from "react-icons/hi"
 import { MdKeyboardArrowRight, MdAccessTime } from "react-icons/md"
 import { BsBuildingLock } from "react-icons/bs"
-import {
-  FaFacebook,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedin,
-  FaYoutube,
-} from "react-icons/fa"
+import { FaFacebook, FaTiktok, FaInstagram, FaLinkedin } from "react-icons/fa"
 
 export default function Footer() {
   return (
@@ -75,7 +69,7 @@ export default function Footer() {
                 </Link>
                 <Link className={s.linkFlex}>
                   <LuPhoneCall className={s.icon} />
-                  081 53 8195
+                  +977 081 53 8195
                 </Link>
                 <Link
                   className={s.linkFlex}
@@ -115,46 +109,30 @@ export default function Footer() {
           <div className={s.followUs}>
             {/* <h4 className={s.h4}>Follow Us:</h4> */}
             <p>Follow Us:</p>
-            <Link
+            <a
               className={s.facebook}
-              href="https://www.facebook.com"
+              href="https://www.facebook.com/ngcivilarchitects?mibextid=LQQJ4d"
               target="_blank"
-              rel="noreferrer"
             >
               <FaFacebook />
-            </Link>
-            <Link
-              className={s.instagram}
-              href="https://www.instagram.com"
+            </a>
+            <a
+              className={s.tiktok}
+              href="https://www.tiktok.com/@ng_civilarchitects?_t=8dyTtFYntkA&_r=1"
               target="_blank"
               rel="noreferrer"
             >
-              <FaInstagram />
-            </Link>
-            <Link
+              <FaTiktok />
+            </a>
+
+            <a
               className={s.linkedin}
               href="https://www.linkedin.com/company/"
               target="_blank"
               rel="noreferrer"
             >
               <FaLinkedin />
-            </Link>
-            <Link
-              className={s.youtube}
-              href="https://www.youtube.com/channel/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaYoutube />
-            </Link>
-            <Link
-              className={s.twitter}
-              href="https://twitter.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaTwitter />
-            </Link>
+            </a>
           </div>
         </div>
       </div>

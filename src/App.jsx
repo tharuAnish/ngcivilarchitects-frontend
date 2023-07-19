@@ -8,6 +8,8 @@ import Contact from "./pages/contact/contact"
 import BlogDetails from "./pages/blogs/blogPage/blogDetails"
 import s from "./App.module.css"
 import ScrollToTop from "./components/scrollToTop/scrollToTop"
+import Courses from "./pages/courses/courses"
+import CourseDetail from "./pages/courses/courseDetail/courseDetail"
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/courses/:courseId" element={<CourseDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blogs/:blogId" element={<BlogDetails />} />

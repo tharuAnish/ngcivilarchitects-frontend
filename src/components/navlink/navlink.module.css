@@ -3,26 +3,13 @@
   position: relative;
 }
 .active {
-  color: #e77e22;
-}
-
-.menu::after {
-  content: "";
-  width: 100%;
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  height: 1.4px;
-  background-color: #e77e22;
-  transition: transform 0.2s ease;
-  transform-origin: right;
-  transform: scaleX(0);
+  border-bottom: 2px solid var(--color-orange-deep);
 }
 
 @media (hover: hover) {
-  .menu:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
+  .menu:hover {
+    color: var(--color-orange-deep);
+    font-size: 0.9rem;
   }
 }
 
