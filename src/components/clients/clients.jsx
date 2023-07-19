@@ -1,8 +1,8 @@
 import s from "./clients.module.css"
 import img1 from "/client1.jpg"
-import img2 from "/client2.png"
-import img3 from "/client3.png"
-import img4 from "/client4.png"
+import img2 from "/client2.jpg"
+import img3 from "/client3.jpg"
+import img4 from "/client4.jpg"
 
 export default function Clients() {
   return (
@@ -23,6 +23,11 @@ export default function Clients() {
 
         <div className={s.client}>
           <img className={s.img} src={img4} alt="client image" loading="lazy" />
+        </div>
+        <div className={s.client}>
+          <p className={s.clientText}>
+            ShapeUp Engineering Consultant & Construction Company
+          </p>
         </div>
       </div>
     </div>
