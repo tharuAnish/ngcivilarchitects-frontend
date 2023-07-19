@@ -10,6 +10,13 @@
   width: auto;
   object-fit: cover;
   filter: brightness(75%);
+  background: rgb(255, 223, 142);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 223, 142, 0.8323704481792717) 0%,
+    rgba(255, 245, 220, 0.33657212885154064) 50%,
+    rgba(252, 252, 252, 0) 100%
+  );
 }
 
 .carousel_text {

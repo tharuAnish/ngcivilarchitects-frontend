@@ -1,8 +1,10 @@
 import styles from "./homeAbout.module.css"
-import ngLogo from "/ngLogoBuildingWhite.png"
+import ngLogo from "/ngLogoNoBg.png"
 import about1 from "/company_about.png"
 import about2 from "/engineer_worker.png"
 import about3 from "/about3.png"
+import { BsArrowRightCircle } from "react-icons/bs"
+import { Link } from "react-router-dom"
 
 export default function HomeAbout() {
   return (
@@ -18,6 +20,9 @@ export default function HomeAbout() {
         <p className={styles.aboutleftsubp}>
           We are the best construction company
         </p>
+        <Link className={styles.button} to="/about">
+          Know More <BsArrowRightCircle className={styles.icon} />
+        </Link>
       </div>
       <div className={styles.aboutright}>
         <div className={styles.point1}>
@@ -30,11 +35,12 @@ export default function HomeAbout() {
           />
 
           <p className={styles.point1P}>
-            We are a dynamic team of consulting engineers offering comprehensive
-            architectural and civil design services. With a strong emphasis on
-            quality and client engagement, we are a rapidly growing company
-            committed to delivering exceptional results through active
-            collaboration and specialized expertise.
+            <strong>We are a dynamic team of consulting engineers </strong>{" "}
+            <br />
+            offering comprehensive architectural and civil design services. With
+            a strong emphasis on quality and client engagement, we are a rapidly
+            growing company committed to delivering exceptional results through
+            active collaboration and specialized expertise.
           </p>
         </div>
         <div className={styles.point1}>

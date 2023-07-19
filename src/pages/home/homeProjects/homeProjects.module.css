@@ -37,10 +37,12 @@
 }
 
 .project {
-  background-color: rgb(233, 233, 233);
-  padding: 10px;
+  background-color: rgba(233, 233, 233, 0.527);
+  /* padding: 10px; */
   border-radius: 0.6rem;
-  box-shadow: 2px 5px 22px rgba(0, 0, 0, 0.199);
+  /* box-shadow: 2px 5px 22px rgba(0, 0, 0, 0.199); */
+  border: 1px solid rgb(235, 235, 235);
+  overflow: hidden;
   color: var(--color-text-darkgrey);
   transition: 0.4s ease;
   max-width: 24rem;
@@ -55,7 +57,7 @@
   height: 300px;
   width: 100%;
   overflow: hidden;
-  border-radius: 6px;
+  border-radius: 6px 6px 0 0;
   overflow: hidden;
 }
 .img {
@@ -105,7 +107,7 @@
   transition: all 0.2s;
   padding: 11px 25px;
   border-radius: 100px;
-  background: var(--color-orange);
+  background: var(--color-orange-deep);
   border: 1px solid transparent;
   display: flex;
   align-items: space-between;
@@ -149,5 +151,8 @@
     margin-block: 0.2rem;
     flex-direction: column;
     font-size: 14px;
+  }
+  .project {
+    background-color: rgba(240, 240, 240, 0.911);
   }
 }

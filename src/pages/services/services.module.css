@@ -48,14 +48,14 @@
 }
 
 .service {
-  padding: 12px;
+  padding: 10px;
   width: 350px;
   min-height: 380px;
-  border-radius: 14px;
-  /* background: #f0f0f0; */
+  border-radius: 10px;
+  background: #f3f3f3b4;
   border: 1px solid #d4d4d4;
-  /* box-shadow: 2px 5px 22px #0003; */
   transition: 0.4s;
+  overflow: hidden;
 }
 
 .service:hover {
@@ -67,7 +67,7 @@
   font-weight: 600;
   color: #2e54a7;
   margin-inline: 0.8rem;
-  margin-block: 1.5rem 1rem;
+  margin-block: 1rem;
 }
 
 .serviceImg {
@@ -75,14 +75,14 @@
   width: 100%;
   height: auto;
   object-fit: cover;
+  border-radius: 5px 5px 0 0;
   background-color: #c9c9c9;
-  border-radius: 8px;
   box-shadow: inset 8px 8px 10px #c3c3c3, inset -8px -8px 10px #cfcfcf;
 }
 
 .serviceDesc {
   margin-inline: 0.8rem;
-  margin-block: 1rem 1.5rem;
+  margin-block: 1rem;
   color: rgb(22, 22, 22);
   font-size: 0.98rem;
   line-height: 1.3rem;
@@ -100,5 +100,9 @@
     max-width: 90vw;
     text-align: center;
     line-height: 25px;
+  }
+  .services {
+    gap: 3rem;
+    margin-block: 1rem;
   }
 }

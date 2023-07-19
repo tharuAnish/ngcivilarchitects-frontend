@@ -130,6 +130,12 @@
   border-top: 0.1rem solid rgba(83, 83, 83, 0.459);
 }
 
+@media screen and (min-width: 1050px) {
+  .img {
+    border-radius: 7px;
+  }
+}
+
 @media screen and (max-width: 1050px) {
   .project {
     max-width: 80%;
@@ -162,7 +168,7 @@
   }
   .project {
     max-width: 98%;
-    gap: 1rem;
+    gap: 0rem;
     margin-block: 3rem;
     border: 1.5px solid rgba(223, 223, 223, 0.795);
     border-radius: 0.5rem;
@@ -173,6 +179,19 @@
   .projectImg {
     height: 280px;
     overflow: hidden;
+  }
+
+  .img {
+    min-height: 280px;
+  }
+
+  .projectName {
+    text-align: center;
+  }
+
+  .subTextContainner {
+    text-align: center;
+    margin-inline: auto;
   }
 
   .projectDetail {

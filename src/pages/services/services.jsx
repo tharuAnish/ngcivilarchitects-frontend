@@ -29,9 +29,6 @@ export default function Services() {
           construction services with skilled professionals and tailored
           solutions. From residential to commercial projects, we handle every
           aspect of construction.
-          {/* Whether you're looking to build your dream
-          home or transform your commercial space, trust NG-Group for top-notch
-          construction services that exceed expectations. */}
         </p>
 
         <div className={s.services}>

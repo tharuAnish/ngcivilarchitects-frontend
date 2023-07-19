@@ -5,6 +5,7 @@ import Team from "./team/team"
 import logo from "/ngLogoBuildingWhite.png"
 import companyImg from "/company_about.png"
 import ChatSupport from "../../components/chatSupport/chatSupport"
+import Clients from "../../components/clients/clients"
 
 export default function About() {
   return (
@@ -60,6 +61,7 @@ export default function About() {
       </div>
       <ChatSupport />
       <Team />
+      <Clients />
       <Footer />
     </div>
   )

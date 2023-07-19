@@ -123,6 +123,7 @@
 .instagram,
 .linkedin,
 .youtube,
+.tiktok,
 .footerLink {
   transition: all 0.3s ease-in-out;
   flex-shrink: 0;
@@ -145,6 +146,9 @@
 
 .youtube:active {
   color: #ff0000;
+}
+.tiktok:active {
+  color: #ee1d52;
 }
 
 .linksList a:active {
@@ -178,6 +182,9 @@
 
   .youtube:hover {
     color: #ff0000;
+  }
+  .tiktok:hover {
+    color: #ee1d52;
   }
 
   .linksList a:is(:hover, :active) {
