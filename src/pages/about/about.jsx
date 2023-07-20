@@ -2,12 +2,19 @@ import Footer from "../../components/footer/footer"
 import Nav from "../../components/nav/nav"
 import s from "./about.module.css"
 import Team from "./team/team"
-import logo from "/ngLogoBuildingWhite.png"
+import logo from "/ngLogoNoBg.png"
 import companyImg from "/company_about.png"
 import ChatSupport from "../../components/chatSupport/chatSupport"
 import Clients from "../../components/clients/clients"
+import { useFetch } from "../../hooks/useFetch"
+import { Link } from "react-router-dom"
+import { MdOutlineEmail } from "react-icons/md"
+import { FaLinkedin, FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa"
 
 export default function About() {
+  const url = "http://127.0.0.1:8000/api/team/"
+  const { data: apiResponse, isPending, error } = useFetch(url)
+  const teams = apiResponse?.team || []
   return (
     <div>
       <Nav />
@@ -18,7 +25,7 @@ export default function About() {
               <img className={s.logo} src={logo} alt="ng-logo" />
             </div>
             <div className={s.headerRight}>
-              <h4 className={s.h4}>NAMMOCHHIYA GROUP</h4>
+              <h4 className={s.h4}>NAMOCHHIYA GROUP</h4>
               <p className={s.ngP}>CIVIL & ARCHITECTS CONSULTING PVT.LTD</p>
             </div>
           </div>
@@ -59,9 +66,89 @@ export default function About() {
           </div>
         </div>
       </div>
-      <ChatSupport />
+      <div className={s.mdWrapper}>
+        {teams &&
+          teams.map(
+            (team) =>
+              team.is_md && (
+                <div key={team.id} className={`wrapper ${s.md}`}>
+                  <div className={s.mdLeft}>
+                    <h4 className={s.mdh4}>Message From Managing Director</h4>
+                    <div
+                      className={s.mdDesc}
+                      dangerouslySetInnerHTML={{ __html: team.staff_desc }}
+                    />
+                    <div className={s.staffLinks}>
+                      Contact me:
+                      {team.gmail && (
+                        <Link
+                          className={s.gmail}
+                          to={`mailto:${team.gmail}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <MdOutlineEmail />
+                        </Link>
+                      )}
+                      {team.linkedin && (
+                        <Link
+                          className={s.linkedin}
+                          to={team.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FaLinkedin />
+                        </Link>
+                      )}
+                      {team.twitter && (
+                        <Link
+                          className={s.twitter}
+                          to={team.twitter}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FaTwitter />
+                        </Link>
+                      )}
+                      {team.facebook && (
+                        <Link
+                          className={s.facebook}
+                          to={team.facebook}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FaFacebook />
+                        </Link>
+                      )}
+                      {team.instagram && (
+                        <a
+                          className={s.instagram}
+                          to={team.instagram}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FaInstagram />
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                  <div className={s.mdRight}>
+                    <div className={s.mdBorder}>
+                      <img
+                        className={s.mdImg}
+                        src={`http://127.0.0.1:8000/${team.staff_pic}`}
+                        alt="staff img"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                </div>
+              )
+          )}
+      </div>
       <Team />
       <Clients />
+      <ChatSupport />
       <Footer />
     </div>
   )
