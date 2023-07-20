@@ -15,7 +15,7 @@ export default function HomeProjects() {
   const sortedProjects = [...projects].sort((a, b) => a.p_rank - b.p_rank)
 
   // Create a new array with limited projects based on P_rank
-  const limitedProjects = sortedProjects.slice(0, 3)
+  const limitedProjects = sortedProjects.slice(-3)
 
   // Function to format the timestamp
   const formatDate = (timestamp) => {
