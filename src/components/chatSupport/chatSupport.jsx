@@ -406,9 +406,11 @@ export default function ChatSupport() {
   }
 
   useEffect(() => {
-    if (location.pathname === "/") {
+    // Only auto-open the chat on the homepage if it hasn't been opened before
+    if (location.pathname === "/" && !localStorage.getItem("chatOpened")) {
       const timer = setTimeout(() => {
         setIsChatOpen(true)
+        localStorage.setItem("chatOpened", "true")
       }, 8000)
 
       return () => clearTimeout(timer)
