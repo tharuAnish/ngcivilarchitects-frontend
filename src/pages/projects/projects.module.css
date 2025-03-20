@@ -186,12 +186,11 @@
   }
 
   .projectName {
-    text-align: center;
+    text-align: left;
   }
 
   .subTextContainner {
-    text-align: center;
-    margin-inline: auto;
+    text-align: left;
   }
 
   .projectDetail {

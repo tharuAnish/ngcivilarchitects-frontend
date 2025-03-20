@@ -59,7 +59,8 @@
 }
 
 .service:hover {
-  translate: 0 -10px;
+  /* translate: 0 -10px; */
+  scale: 1.02;
 }
 
 .serviceTitle {

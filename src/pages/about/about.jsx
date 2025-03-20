@@ -12,7 +12,7 @@ import { MdOutlineEmail } from "react-icons/md"
 import { FaLinkedin, FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa"
 
 export default function About() {
-  const url = "http://127.0.0.1:8000/api/team/"
+  const url = "https://namoanish.pythonanywhere.com/api/team/"
   const { data: apiResponse, isPending, error } = useFetch(url)
   const teams = apiResponse?.team || []
   return (
@@ -136,7 +136,7 @@ export default function About() {
                     <div className={s.mdBorder}>
                       <img
                         className={s.mdImg}
-                        src={`http://127.0.0.1:8000/${team.staff_pic}`}
+                        src={`https://namoanish.pythonanywhere.com${team.staff_pic}`}
                         alt="staff img"
                         loading="lazy"
                       />
