@@ -9,7 +9,7 @@ import Loading from "../../components/loading/loading"
 import { BsArrowRightCircle } from "react-icons/bs"
 
 export default function Courses() {
-  const url = "http://127.0.0.1:8000/api/course/"
+  const url = "https://namoanish.pythonanywhere.com/api/course/"
   const { data: apiResponse, isPending, error } = useFetch(url)
   const courses = apiResponse?.courses || []
 
@@ -50,7 +50,7 @@ export default function Courses() {
             <div className={s.course} key={course.id}>
               <img
                 className={s.img}
-                src={`http://127.0.0.1:8000${course.c_pic}`}
+                src={`https://namoanish.pythonanywhere.com${course.c_pic}`}
                 alt="course img"
                 loading="lazy"
               />

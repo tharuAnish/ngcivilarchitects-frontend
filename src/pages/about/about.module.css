@@ -339,19 +339,27 @@
     flex-direction: column-reverse;
     gap: 1.5rem;
     align-items: center;
-    padding-block: 2.5rem;
+    padding-block: 2.3rem;
   }
   .mdRight {
     margin-block: 1rem;
   }
   .mdImg {
-    width: 280px;
+    max-width: 280px;
   }
   .mdLeft {
     flex-basis: 100%;
     color: var(--color-text-darkgrey);
     max-width: 92%;
     margin-inline: auto;
+  }
+  .mdh4 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: start;
+  }
+  .mdDesc {
+    margin-block: 0.8rem;
   }
   .aboutHeader {
     min-height: 300px;
@@ -361,7 +369,7 @@
     height: 170px;
   }
   .h4 {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     margin-inline: auto;
   }
   .h4::after {

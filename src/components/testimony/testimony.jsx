@@ -1,5 +1,5 @@
 import { useFetch } from "../../hooks/useFetch"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import s from "./testimony.module.css"
 import { Carousel } from "react-responsive-carousel"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
@@ -13,19 +13,20 @@ export default function Testimony() {
 
   const [showArrows, setShowArrows] = useState(false)
 
-  useEffect(() => {
-    const handleResize = () => {
-      const windowWidth = window.innerWidth
-      setShowArrows(windowWidth > 700)
-    }
+  // Use useCallback for the resize handler to ensure it's stable between renders
+  const handleResize = useCallback(() => {
+    setShowArrows(window.innerWidth > 700)
+  }, [])
 
+  useEffect(() => {
     window.addEventListener("resize", handleResize)
+    // Set initial state on mount
     handleResize()
 
     return () => {
       window.removeEventListener("resize", handleResize)
     }
-  }, [])
+  }, [handleResize])
 
   return (
     <div className={s.testimonials}>
@@ -35,22 +36,26 @@ export default function Testimony() {
         {isPending && <Loading />}
         {error && (
           <div className={s.error}>
-            <img src={error} alt="Error" />
+            {/* Display error as text assuming error is a message */}
+            <p>{error}</p>
           </div>
         )}
-        <Carousel
-          infiniteLoop
-          autoPlay
-          interval={20000}
-          transitionTime={1000}
-          showArrows={showArrows}
-          showStatus={false}
-          showThumbs={false}
-          showIndicators={false}
-          swipeable={false}
-        >
-          {testimonials &&
-            testimonials.map((testimonial) => (
+        {!isPending && !error && testimonials.length === 0 && (
+          <p>No testimonials available at the moment.</p>
+        )}
+        {testimonials.length > 0 && (
+          <Carousel
+            infiniteLoop
+            autoPlay
+            interval={10000}
+            transitionTime={1000}
+            showArrows={showArrows}
+            showStatus={false}
+            showThumbs={false}
+            showIndicators={false}
+            swipeable={false}
+          >
+            {testimonials.map((testimonial) => (
               <div key={testimonial.id}>
                 <div className={s.imgDiv}>
                   <img
@@ -69,7 +74,8 @@ export default function Testimony() {
                 <p className={s.clientPos}>{testimonial.client_pos}</p>
               </div>
             ))}
-        </Carousel>
+          </Carousel>
+        )}
       </div>
     </div>
   )

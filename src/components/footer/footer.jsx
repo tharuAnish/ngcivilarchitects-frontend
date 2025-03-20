@@ -88,13 +88,13 @@ export default function Footer() {
                 <div className={s.linkFlex} to="/blogs">
                   <MdKeyboardArrowRight className={s.icon} />
                   <div>
-                    Our support team available to help you 24 hours a day, seven
-                    days a week.
+                    During regular business hours, working days of the week, our
+                    customer support team is here to help you.
                   </div>
                 </div>
                 <div className={s.linkFlex} to="/blogs">
                   <MdAccessTime className={s.icon} />
-                  <div>Sun-Fri: 9am to 5pm</div>
+                  <div>Sun - Fri: 10am to 5pm</div>
                 </div>
                 <div className={s.linkFlex} to="/blogs">
                   <BsBuildingLock className={s.icon} />

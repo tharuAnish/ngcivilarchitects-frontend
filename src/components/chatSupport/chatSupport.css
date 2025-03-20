@@ -146,7 +146,7 @@
 
   /* width: 180px; */
   height: auto;
-  background-color: #fce085;
+  background-color: #ffe89e;
   padding: 10px;
   position: relative;
   margin-inline: 20px;
@@ -163,13 +163,13 @@
   left: -15px;
   top: 4px;
   border-top: 15px solid transparent;
-  border-right: 15px solid #fff6d9e1;
+  border-right: 15px solid #fcf1d0;
   border-left: none;
   border-bottom: 15px solid transparent;
 }
 
 .bot-text {
-  background-color: #fff6d9e1;
+  background-color: #fcf1d0;
 }
 
 .message-text.user-text:after {
@@ -179,7 +179,7 @@
   top: 4px;
   border-top: 15px solid transparent;
   border-right: none;
-  border-left: 15px solid #fce085;
+  border-left: 15px solid #ffe89e;
   border-bottom: 15px solid transparent;
 }
 

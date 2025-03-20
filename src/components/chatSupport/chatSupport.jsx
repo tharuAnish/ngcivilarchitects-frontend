@@ -189,9 +189,11 @@ const handleUserResponse = (userText, handleBotMessage) => {
       author: "bot",
       text: (
         <>
-          Our office is open from 9:00 AM to 5:00 PM, Monday through Saturday.
-          <br />
-          Sunday: Closed
+          Our regular office hours are from 10:00 AM to 5:00 PM, Sunday through
+          Friday. We remain closed on Saturdays and kindly inform you that
+          during festival occasions, our office will also be closed. Thank you
+          for your understanding. Should you have any further inquiries, feel
+          free to contact us during our operational hours.
         </>
       ),
     })

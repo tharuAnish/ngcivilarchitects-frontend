@@ -36,7 +36,7 @@
   width: 70%;
   max-width: 940px;
   margin-inline: auto;
-  margin-block: 4rem;
+  margin-block: 3rem;
   max-height: 265px;
   overflow: hidden;
   align-items: center;
@@ -161,30 +161,37 @@
   .team {
     display: flex;
     flex-direction: column;
-    width: 92%;
+    width: 90%;
     margin-inline: auto;
-    margin-block: 4rem;
+    margin-block: 3rem;
     max-height: 100%;
     align-items: center;
     gap: 1rem;
-    border-radius: 1rem;
+    border-radius: 8px;
+    border: 1px solid rgb(218, 218, 218);
   }
 
   .teamLeft {
     min-width: 100%;
-    max-height: 350px;
+    max-height: 310px;
+    padding: 0.8rem;
   }
 
   .staffImg {
     width: 100%;
     height: auto;
     object-fit: cover;
-    max-height: 380px;
+    max-height: 350px;
+    border-radius: 7px 7px 0 0;
+    border: 1px solid rgb(218, 218, 218);
   }
 
   .teamRight {
     flex-basis: 65%;
     padding: 0rem;
-    margin: 0.8rem 1rem 2rem;
+    margin: 0.2rem 0.8rem 1.5rem;
+  }
+  .staffName {
+    margin-block: 0.2rem 0.5rem;
   }
 }

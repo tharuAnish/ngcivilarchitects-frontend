@@ -61,4 +61,7 @@
     min-width: 300px;
     max-height: 90px;
   }
+  .clientText {
+    font-size: 1rem;
+  }
 }
