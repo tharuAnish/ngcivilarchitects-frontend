@@ -10,6 +10,7 @@ import s from "./App.module.css"
 import ScrollToTop from "./components/scrollToTop/scrollToTop"
 import Courses from "./pages/courses/courses"
 import CourseDetail from "./pages/courses/courseDetail/courseDetail"
+import Dev from "./pages/dev/dev"
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blogs/:blogId" element={<BlogDetails />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/dev" element={<Dev />} />
         </Routes>
       </Router>
     </>
